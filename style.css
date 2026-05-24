@@ -1,0 +1,195 @@
+/* ==================== FONTS ==================== */
+@font-face {
+  font-family: "Inter";
+  src: url("./fonts/inter-regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("./fonts/inter-semi-bold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ==================== VARIABLES ==================== */
+:root {
+  --header-black-color: #555;
+
+  --card-border-radius: 16px;
+}
+
+/* ==================== GLOBAL ==================== */
+body {
+  min-width: 1440px;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-variant-numeric: lining-nums tabular-nums;
+}
+
+.container {
+  max-width: 1312px;
+  margin: 0 auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* ==================== HEADER ==================== */
+.header {
+  height: 72px;
+  background: linear-gradient(90deg, #fedd2c 0%, #f9c201 100%);
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 16px;
+  }
+}
+
+.header__logo {
+  width: 137px;
+  height: 22px;
+}
+
+.header__menu-list {
+  display: flex;
+  gap: 24px;
+  width: 433px;
+}
+
+.header__menu-item {
+  /* There's no other way to get into Pixel Perfect. */
+  &:nth-child(1) {
+    width: 47px;
+  }
+
+  &:nth-child(2) {
+    width: 51px;
+  }
+
+  &:nth-child(3) {
+    width: 45px;
+  }
+
+  &:nth-child(4) {
+    width: 72px;
+  }
+
+  &:nth-child(5) {
+    width: 122px;
+  }
+}
+
+.header__menu-link {
+  padding-block: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--header-black-color);
+  text-decoration: none;
+}
+
+.header__contacts {
+  display: flex;
+  flex-direction: column;
+  width: 188px;
+}
+
+.header__contacts-phone {
+  align-self: end;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.33333;
+  letter-spacing: -0.5px;
+  color: var(--header-black-color);
+  text-decoration: none;
+}
+
+.header__contacts-schedule {
+  font-size: 12px;
+  line-height: 1.3333;
+  color: var(--header-black-color);
+}
+
+/* ==================== MENU ==================== */
+.menu {
+  padding-block: 32px;
+}
+
+.menu__title {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #1c1c1c;
+}
+
+.menu__list {
+  display: flex;
+  gap: 32px;
+  margin-top: 32px;
+}
+
+.menu__item {
+  width: 304px;
+  height: 304px;
+  border-radius: var(--card-border-radius);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  /*   I think the icons are decorative because they represent a category and not a specific dish. */
+  &:nth-child(1) {
+    background-image:
+      linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.5) 100%),
+      url("./images/menu/pizza.jpg");
+  }
+
+  &:nth-child(2) {
+    background-image:
+      linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.5) 100%),
+      url("./images/menu/soups.jpg");
+  }
+
+  &:nth-child(3) {
+    background-image:
+      linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.5) 100%),
+      url("./images/menu/hot-dishes.jpg");
+  }
+
+  &:nth-child(4) {
+    background-image:
+      linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.5) 100%),
+      url("./images/menu/salads.jpg");
+  }
+}
+
+.menu__link {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 16px;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.3333;
+  color: #fff;
+  text-decoration: none;
+}
+
+.menu__link-text {
+  margin-top: auto;
+}

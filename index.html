@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Resto App</title>
+    <link
+      rel="stylesheet"
+      href="./normalize.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./style.css"
+    />
+  </head>
+  <body>
+    <!-- ==================== HEADER ==================== -->
+    <header class="header">
+      <div class="container">
+        <a
+          href="/"
+          class="header__logo"
+          title="На главную"
+          aria-label="Перейти на главную страницу"
+          ><img
+            src="./images/logo.svg"
+            alt=""
+            aria-hidden="true"
+        /></a>
+
+        <nav>
+          <ul class="header__menu-list">
+            <li class="header__menu-item">
+              <a
+                href="/"
+                class="header__menu-link"
+                >Меню</a
+              >
+            </li>
+            <li class="header__menu-item">
+              <a
+                href="/"
+                class="header__menu-link"
+                >Акции</a
+              >
+            </li>
+            <li class="header__menu-item">
+              <a
+                href="/"
+                class="header__menu-link"
+                >О нас</a
+              >
+            </li>
+            <li class="header__menu-item">
+              <a
+                href="/"
+                class="header__menu-link"
+                >События</a
+              >
+            </li>
+            <li class="header__menu-item">
+              <a
+                href="/"
+                class="header__menu-link"
+                >Зоны доставки</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <div class="header__contacts">
+          <a
+            href="tel:+01234567890"
+            class="header__contacts-phone"
+            title="Позвонить"
+            aria-label="Позвонить по номеру телефона доставки +01234567890"
+            >+0 (123) 456 78-90</a
+          >
+          <p class="header__contacts-schedule">
+            Прием заказов с 10:00 до 22:40
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <!-- ==================== MAIN ==================== -->
+    <main>
+      <h1 class="visually-hidden">Приложение ресторана</h1>
+      <!-- ==================== MENU ==================== -->
+      <section class="container menu">
+        <h2 class="menu__title">Меню</h2>
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a
+              href="/"
+              class="menu__link"
+            >
+              <span class="menu__link-text">Пицца</span></a
+            >
+          </li>
+          <li class="menu__item">
+            <a
+              href="/"
+              class="menu__link"
+            >
+              <span class="menu__link-text">Супы</span></a
+            >
+          </li>
+          <li class="menu__item">
+            <a
+              href="/"
+              class="menu__link"
+            >
+              <span class="menu__link-text">Горячие блюда</span>
+            </a>
+          </li>
+          <li class="menu__item">
+            <a
+              href="/"
+              class="menu__link"
+            >
+              <span class="menu__link-text">Салаты</span></a
+            >
+          </li>
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>
