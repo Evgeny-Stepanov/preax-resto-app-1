@@ -39,10 +39,8 @@ body {
 }
 
 .container {
-  /* Horizontal safety paddings to prevent content from sticking to the edges of the screen during responsive design */
-  max-width: calc(1312px + 30px);
+  max-width: 1312px;
   margin: 0 auto;
-  padding-inline: 15px;
 }
 
 .h2 {
@@ -139,8 +137,12 @@ body {
 }
 
 .menu__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
   width: 304px;
   height: 304px;
+  padding: 16px;
   border-radius: var(--card-border-radius);
   background-position: center;
   background-size: cover;
@@ -165,11 +167,11 @@ body {
 }
 
 .menu__link {
-  display: flex;
-  flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   height: 100%;
-  padding: 16px;
-  text-decoration: none;
 }
 
 .menu__item-title {
