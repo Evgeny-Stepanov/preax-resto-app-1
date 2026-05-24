@@ -28,6 +28,8 @@
           ><img
             src="./images/logo.svg"
             alt=""
+            width="137"
+            height="22"
             aria-hidden="true"
         /></a>
 
@@ -70,18 +72,19 @@
             </li>
           </ul>
         </nav>
-        <div class="header__contacts">
+
+        <address class="header__contacts">
           <a
             href="tel:+01234567890"
             class="header__contacts-phone"
             title="Позвонить"
-            aria-label="Позвонить по номеру телефона доставки +01234567890"
             >+0 (123) 456 78-90</a
           >
           <p class="header__contacts-schedule">
-            Прием заказов с 10:00 до 22:40
+            Прием заказов с <time datetime="10:00">10:00</time> до
+            <time datetime="22:40">22:40</time>
           </p>
-        </div>
+        </address>
       </div>
     </header>
 
@@ -90,14 +93,14 @@
       <h1 class="visually-hidden">Приложение ресторана</h1>
       <!-- ==================== MENU ==================== -->
       <section class="container menu">
-        <h2 class="menu__title">Меню</h2>
+        <h2 class="h2">Меню</h2>
         <ul class="menu__list">
           <li class="menu__item">
             <a
               href="/"
               class="menu__link"
             >
-              <span class="menu__link-text">Пицца</span></a
+              <h3 class="menu__item-title">Пицца</h3></a
             >
           </li>
           <li class="menu__item">
@@ -105,7 +108,7 @@
               href="/"
               class="menu__link"
             >
-              <span class="menu__link-text">Супы</span></a
+              <h3 class="menu__item-title">Супы</h3></a
             >
           </li>
           <li class="menu__item">
@@ -113,7 +116,7 @@
               href="/"
               class="menu__link"
             >
-              <span class="menu__link-text">Горячие блюда</span>
+              <h3 class="menu__item-title">Горячие блюда</h3>
             </a>
           </li>
           <li class="menu__item">
@@ -121,7 +124,7 @@
               href="/"
               class="menu__link"
             >
-              <span class="menu__link-text">Салаты</span></a
+              <h3 class="menu__item-title">Салаты</h3></a
             >
           </li>
         </ul>
