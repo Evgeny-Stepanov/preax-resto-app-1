@@ -17,25 +17,33 @@
 
 /* ==================== VARIABLES ==================== */
 :root {
+  --section-padding-y: 32px;
+
   --header-gradient: linear-gradient(90deg, #fedd2c 0%, #f9c201 100%);
   --header-text-color: #555;
 
-  --title-color: #1c1c1c;
-
-  --card-gradient: linear-gradient(
+  --menu-card-gradient: linear-gradient(
     180deg,
     rgba(0, 0, 0, 0) 50%,
     rgba(0, 0, 0, 0.5) 100%
   );
-  --card-title-color: #ffffff;
-  --card-border-radius: 16px;
+
+  --black-color: #1c1c1c;
+
+  --border-radius: 16px;
 }
 
 /* ==================== GLOBAL ==================== */
 body {
   min-width: 1440px;
   font-family: "Inter", sans-serif;
+  font-size: 16px;
   font-weight: 400;
+  line-height: 1.5;
+}
+
+section {
+  padding-block: var(--section-padding-y);
 }
 
 .container {
@@ -48,7 +56,7 @@ body {
   font-size: 40px;
   font-weight: 600;
   line-height: 1.2;
-  color: var(--title-color);
+  color: var(--black-color);
 }
 
 .visually-hidden {
@@ -62,6 +70,86 @@ body {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+/* ==================== COMPONENTS ==================== */
+
+.list {
+  /* To prevent the layout from breaking when the number of cards increases */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+
+.link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  height: 468px;
+}
+
+.card__badge-list {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: flex;
+  gap: 8px;
+}
+
+.card__badge-item {
+  width: 36px;
+  height: 36px;
+
+  img {
+    border-radius: 8px;
+  }
+}
+
+.card__image {
+  width: 304px;
+  height: 304px;
+
+  img {
+    border-radius: var(--border-radius);
+  }
+}
+
+.card__title {
+  margin-bottom: 4px;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.3333;
+  color: var(--black-color);
+}
+
+.card__description {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  color: #727272;
+  overflow: hidden;
+}
+
+.card__button {
+  z-index: 100;
+  padding: 16px 24px;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.3333;
+  color: var(--black-color);
+  background-color: #f4f4f4;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: not-allowed;
 }
 
 /* ==================== HEADER ==================== */
@@ -78,6 +166,28 @@ body {
     gap: 50px;
     padding-block: 16px;
   }
+}
+
+.promo {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  padding-block: 12px;
+  background-color: var(--black-color);
+}
+
+.promo__text {
+  font-size: 18px;
+  line-height: 1.3333;
+  color: #fff;
+}
+
+.promo__button {
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
 }
 
 .header__logo {
@@ -101,9 +211,15 @@ body {
   text-decoration: none;
 }
 
+.header__right-column {
+  display: flex;
+  gap: 64px;
+}
+
 .header__contacts {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   flex-shrink: 0;
 }
 
@@ -124,54 +240,62 @@ body {
   color: var(--header-text-color);
 }
 
+.header__button-list {
+  display: flex;
+  gap: 16px;
+}
+
+.header__button-item:first-child {
+  .header__button {
+    background-color: transparent;
+  }
+}
+
+.header__button-item:last-child {
+  .header__button {
+    background-color: var(--black-color);
+  }
+}
+
+.header__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 56px;
+  height: 48px;
+  border: 2px solid var(--black-color);
+  border-radius: var(--border-radius);
+  padding: 0;
+}
+
 /* ==================== MENU ==================== */
-.menu {
-  padding-block: 32px;
-}
-
-.menu__list {
-  /* To prevent the layout from breaking when the number of cards increases */
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 32px;
-}
-
 .menu__item {
   position: relative;
   display: flex;
   flex-direction: column;
-  width: 304px;
   height: 304px;
   padding: 16px;
-  border-radius: var(--card-border-radius);
+  border-radius: var(--border-radius);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-
-  /* I think the icons are decorative because they represent a category and not a specific dish */
-  &:nth-child(1) {
-    background-image: var(--card-gradient), url("./images/menu/pizza.jpg");
-  }
-
-  &:nth-child(2) {
-    background-image: var(--card-gradient), url("./images/menu/soups.jpg");
-  }
-
-  &:nth-child(3) {
-    background-image: var(--card-gradient), url("./images/menu/hot-dishes.jpg");
-  }
-
-  &:nth-child(4) {
-    background-image: var(--card-gradient), url("./images/menu/salads.jpg");
-  }
 }
 
-.menu__link {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+.menu__item--is-pizza {
+  background-image: var(--menu-card-gradient), url("./images/menu/pizza.jpg");
+}
+
+.menu__item--is-soups {
+  background-image: var(--menu-card-gradient), url("./images/menu/soups.jpg");
+}
+
+.menu__item--is-hot-dishes {
+  background-image:
+    var(--menu-card-gradient), url("./images/menu/hot-dishes.jpg");
+}
+
+.menu__item--is-salads {
+  background-image: var(--menu-card-gradient), url("./images/menu/salads.jpg");
 }
 
 .menu__item-title {
@@ -179,5 +303,5 @@ body {
   font-size: 24px;
   font-weight: 600;
   line-height: 1.3333;
-  color: var(--card-title-color);
+  color: #ffffff;
 }
