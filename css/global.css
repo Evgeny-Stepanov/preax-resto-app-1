@@ -1,0 +1,44 @@
+body {
+  min-width: 1440px;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+section {
+  padding-block: var(--section-padding-y);
+}
+
+.container {
+  max-width: 1312px;
+  margin: 0 auto;
+}
+
+.h2 {
+  margin-bottom: 32px;
+  font-size: 40px;
+  line-height: 1.2;
+  font-weight: 600;
+  color: var(--black-color);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.cover-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

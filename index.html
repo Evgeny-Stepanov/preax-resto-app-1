@@ -9,17 +9,13 @@
     <title>Resto App</title>
     <link
       rel="stylesheet"
-      href="./normalize.css"
-    />
-    <link
-      rel="stylesheet"
       href="./style.css"
     />
   </head>
   <body>
     <!-- ==================== HEADER ==================== -->
     <header class="header">
-      <div class="promo">
+      <aside class="promo">
         <p class="promo__text">Бесплатная доставка от 1 000 ₽</p>
         <button
           type="button"
@@ -27,56 +23,61 @@
           aria-label="Скрыть промо акцию"
         >
           <img
-            src="./images/header/close.svg"
+            src="./images/icons/close.svg"
             alt=""
+            width="20"
+            height="20"
           />
         </button>
-      </div>
+      </aside>
+
       <div class="container">
         <a
-          href="/"
+          href="index.html"
           class="header__logo"
           title="На главную"
           ><img
-            src="./images/header/logo.svg"
-            alt="Перейти на главную страницу"
+            src="./images/icons/logo.svg"
+            alt="Resto app"
             width="137"
             height="22"
-        /></a>
+          />
+          <span class="visually-hidden">На главную</span>
+        </a>
 
         <nav>
           <ul class="header__menu-list">
-            <li class="header__menu-item">
+            <li>
               <a
-                href="/"
+                href="index.html"
                 class="header__menu-link"
                 >Меню</a
               >
             </li>
-            <li class="header__menu-item">
+            <li>
               <a
-                href="/"
+                href="index.html"
                 class="header__menu-link"
                 >Акции</a
               >
             </li>
-            <li class="header__menu-item">
+            <li>
               <a
-                href="/"
+                href="index.html"
                 class="header__menu-link"
                 >О нас</a
               >
             </li>
-            <li class="header__menu-item">
+            <li>
               <a
-                href="/"
+                href="index.html"
                 class="header__menu-link"
                 >События</a
               >
             </li>
-            <li class="header__menu-item">
+            <li>
               <a
-                href="/"
+                href="index.html"
                 class="header__menu-link"
                 >Зоны доставки</a
               >
@@ -84,7 +85,7 @@
           </ul>
         </nav>
 
-        <div class="header__right-column">
+        <div class="header__actions">
           <address class="header__contacts">
             <a
               href="tel:+01234567890"
@@ -98,31 +99,57 @@
             </p>
           </address>
 
-          <ul class="header__button-list">
-            <li class="header__button-item">
+          <ul class="header__buttons-list">
+            <li>
               <button
                 type="button"
-                class="header__button"
+                class="header__button header__button--is-account"
                 title="Личный кабинет"
                 aria-label="Открыть личный кабинет"
               >
-                <img
-                  src="./images/header/user.svg"
-                  alt=""
-                />
+                <div class="header__button-icon">
+                  <svg
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M12 3.84999C10.2603 3.84999 8.85002 5.2603 8.85002 6.99999C8.85002 8.73969 10.2603 10.15 12 10.15C13.7397 10.15 15.15 8.73969 15.15 6.99999C15.15 5.2603 13.7397 3.84999 12 3.84999ZM7.15002 6.99999C7.15002 4.32141 9.32144 2.14999 12 2.14999C14.6786 2.14999 16.85 4.32141 16.85 6.99999C16.85 9.67858 14.6786 11.85 12 11.85C9.32144 11.85 7.15002 9.67858 7.15002 6.99999ZM7.43041 15.7854C6.25402 16.3736 5.85002 17.0289 5.85002 17.5C5.85002 17.9711 6.25402 18.6264 7.43041 19.2146C8.55596 19.7774 10.1704 20.15 12 20.15C13.8297 20.15 15.4441 19.7774 16.5696 19.2146C17.746 18.6264 18.15 17.9711 18.15 17.5C18.15 17.0289 17.746 16.3736 16.5696 15.7854C15.4441 15.2226 13.8297 14.85 12 14.85C10.1704 14.85 8.55596 15.2226 7.43041 15.7854ZM6.67015 14.2649C8.0781 13.5609 9.96368 13.15 12 13.15C14.0364 13.15 15.922 13.5609 17.3299 14.2649C18.687 14.9434 19.85 16.0381 19.85 17.5C19.85 18.9619 18.687 20.0566 17.3299 20.7351C15.922 21.4391 14.0364 21.85 12 21.85C9.96368 21.85 8.0781 21.4391 6.67015 20.7351C5.31304 20.0566 4.15002 18.9619 4.15002 17.5C4.15002 16.0381 5.31304 14.9434 6.67015 14.2649Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </div>
               </button>
             </li>
-            <li class="header__button-item">
+            <li>
               <button
                 type="button"
-                class="header__button"
+                class="header__button header__button--is-cart"
                 title="Корзина"
                 aria-label="Открыть корзину"
               >
-                <img
-                  src="./images/header/cart.svg"
-                  alt=""
-                />
+                <div class="header__button-icon">
+                  <svg
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M20.0343 6.05767C19.8234 5.80451 19.5593 5.6009 19.2607 5.4613C18.9622 5.3217 18.6367 5.24954 18.3071 5.24994H6.18142L6.14992 4.9867C6.08546 4.43953 5.82247 3.93503 5.41081 3.56884C4.99915 3.20266 4.46743 3.00026 3.91648 3L3.74998 3C3.55107 3 3.36031 3.07902 3.21966 3.21966C3.07902 3.36031 3 3.55107 3 3.74998C3 3.94889 3.07902 4.13965 3.21966 4.2803C3.36031 4.42095 3.55107 4.49996 3.74998 4.49996H3.91648C4.10017 4.49999 4.27747 4.56743 4.41474 4.68949C4.55202 4.81156 4.63972 4.97976 4.66121 5.1622L5.69318 13.937C5.80032 14.8495 6.23878 15.691 6.92533 16.3017C7.61189 16.9123 8.49875 17.2497 9.41759 17.2496H17.2496C17.4485 17.2496 17.6393 17.1706 17.78 17.03C17.9206 16.8893 17.9996 16.6986 17.9996 16.4997C17.9996 16.3008 17.9206 16.11 17.78 15.9693C17.6393 15.8287 17.4485 15.7497 17.2496 15.7497H9.41759C8.95339 15.7484 8.50096 15.6035 8.12232 15.335C7.74368 15.0664 7.45737 14.6874 7.30264 14.2497H16.2424C17.1216 14.2498 17.9729 13.9409 18.6475 13.3771C19.3221 12.8132 19.7771 12.0303 19.9331 11.165L20.5218 7.89963C20.5806 7.57564 20.5674 7.24269 20.4831 6.92438C20.3989 6.60607 20.2457 6.31017 20.0343 6.05767ZM19.0496 7.63338L18.4601 10.8988C18.3665 11.4185 18.093 11.8888 17.6875 12.2272C17.2821 12.5656 16.7705 12.7506 16.2424 12.7498H7.06415L6.35842 6.74991H18.3071C18.4173 6.74925 18.5263 6.77287 18.6263 6.8191C18.7263 6.86532 18.8149 6.93301 18.8857 7.01735C18.9566 7.1017 19.0081 7.20062 19.0364 7.30709C19.0647 7.41357 19.0692 7.52497 19.0496 7.63338Z"
+                      fill="currentColor"
+                    />
+                    <path
+                      d="M8.24996 21C9.07836 21 9.74992 20.3284 9.74992 19.5C9.74992 18.6716 9.07836 18.0001 8.24996 18.0001C7.42155 18.0001 6.75 18.6716 6.75 19.5C6.75 20.3284 7.42155 21 8.24996 21Z"
+                      fill="currentColor"
+                    />
+                    <path
+                      d="M15.7497 21C16.5781 21 17.2496 20.3284 17.2496 19.5C17.2496 18.6716 16.5781 18.0001 15.7497 18.0001C14.9212 18.0001 14.2497 18.6716 14.2497 19.5C14.2497 20.3284 14.9212 21 15.7497 21Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </div>
               </button>
             </li>
           </ul>
@@ -132,42 +159,73 @@
 
     <!-- ==================== MAIN ==================== -->
     <main class="container">
-      <h1 class="visually-hidden">Приложение ресторана</h1>
+      <h1 class="visually-hidden">Приложение ресторана resto app.</h1>
 
       <!-- ==================== MENU ==================== -->
       <section class="menu">
         <h2 class="h2">Меню</h2>
-        <ul class="list">
-          <li class="menu__item menu__item--is-pizza">
-            <h3 class="menu__item-title">Пицца</h3>
+        <ul class="cards-list">
+          <li>
             <a
-              href="/"
-              class="link"
-            ></a>
-          </li>
+              href="index.html"
+              class="menu__link"
+            >
+              <img
+                src="./images/menu/pizza.webp"
+                alt="Пицца"
+                width="304"
+                height="304"
+                class="cover-image"
+              />
 
-          <li class="menu__item menu__item--is-soups">
-            <h3 class="menu__item-title">Супы</h3>
-            <a
-              href="/"
-              class="link"
-            ></a>
+              <h3 class="menu__item-title">Пицца</h3></a
+            >
           </li>
-
-          <li class="menu__item menu__item--is-hot-dishes">
-            <h3 class="menu__item-title">Горячие блюда</h3>
+          <li>
             <a
-              href="/"
-              class="link"
-            ></a>
+              href="index.html"
+              class="menu__link"
+            >
+              <img
+                src="./images/menu/soups.webp"
+                alt="Супы"
+                width="304"
+                height="304"
+                class="cover-image"
+              />
+              <h3 class="menu__item-title">Супы</h3></a
+            >
           </li>
-
-          <li class="menu__item menu__item--is-salads">
-            <h3 class="menu__item-title">Салаты</h3>
+          <li>
             <a
-              href="/"
-              class="link"
-            ></a>
+              href="index.html"
+              class="menu__link"
+            >
+              <img
+                src="./images/menu/hot-dishes.webp"
+                alt="Горячие блюда"
+                width="304"
+                height="304"
+                class="cover-image"
+              />
+
+              <h3 class="menu__item-title">Горячие блюда</h3></a
+            >
+          </li>
+          <li>
+            <a
+              href="index.html"
+              class="menu__link"
+            >
+              <img
+                src="./images/menu/salads.webp"
+                alt="Салаты"
+                width="304"
+                height="304"
+                class="cover-image"
+              />
+              <h3 class="menu__item-title">Салаты</h3></a
+            >
           </li>
         </ul>
       </section>
@@ -175,155 +233,167 @@
       <!-- ==================== NEW ==================== -->
       <section>
         <h2 class="h2">Новинки</h2>
-        <ul class="list">
+        <ul class="cards-list">
           <li class="card">
-            <ul class="card__badge-list">
-              <li class="card__badge-item">
+            <a
+              href="index.html"
+              class="card__link"
+            >
+              <ul class="card__badge-list">
+                <li class="card__badge-item">
+                  <img
+                    src="./images/icons/badges/vegetarian.svg"
+                    alt="Вегетарианское блюдо"
+                    width="36"
+                    height="36"
+                  />
+                </li>
+              </ul>
+
+              <div class="card__image">
                 <img
-                  src="./images/badge/vegetarian.svg"
-                  alt="Вегетарианское блюдо"
+                  src="./images/new/chinese-egg-soup.webp"
+                  alt="Китайский яичный суп"
+                  width="304"
+                  height="304"
+                  class="cover-image"
                 />
-              </li>
-            </ul>
+              </div>
 
-            <div class="card__image">
-              <img
-                src="./images/new/chinese-egg-soup.jpg"
-                alt="Китайский яичный суп"
-                width="304"
-                height="304"
-              />
-            </div>
-
-            <div class="card__text">
-              <h3 class="card__title">Китайский яичный суп</h3>
-              <p class="card__description">
-                Традиционный китайский суп с яйцом и томатами черри
-              </p>
-            </div>
+              <div class="card__text">
+                <h3 class="card__title">Китайский яичный суп</h3>
+                <p class="card__description">
+                  Традиционный китайский суп с яйцом и томатами черри
+                </p>
+              </div>
+            </a>
 
             <button
               type="button"
               class="card__button"
               disabled
             >
-              350 ₽
+              350 ₽ <span class="visually-hidden">Добавить в корзину.</span>
             </button>
-            <a
-              href="/"
-              class="link"
-            ></a>
           </li>
 
           <li class="card">
-            <ul class="card__badge-list">
-              <li class="card__badge-item">
+            <a
+              href="index.html"
+              class="card__link"
+              ><ul class="card__badge-list">
+                <li class="card__badge-item">
+                  <img
+                    src="./images/icons/badges/vegetarian.svg"
+                    alt="Вегетарианское блюдо"
+                    width="36"
+                    height="36"
+                  />
+                </li>
+              </ul>
+
+              <div class="card__image">
                 <img
-                  src="./images/badge/vegetarian.svg"
-                  alt="Вегетарианское блюдо"
+                  src="./images/new/paella.webp"
+                  alt="Паэлья"
+                  width="304"
+                  height="304"
+                  class="cover-image"
                 />
-              </li>
-            </ul>
+              </div>
 
-            <div class="card__image">
-              <img
-                src="./images/new/paella.jpg"
-                alt="Паэлья"
-                width="304"
-                height="304"
-              />
-            </div>
-
-            <div class="card__text">
-              <h3 class="card__title">Паэлья</h3>
-              <p class="card__description">
-                Традиционное испанское блюдо — рис, колбаски чоризо, куриное
-                бедро, кальмар, кукуруза, горошек, специи
-              </p>
-            </div>
+              <div class="card__text">
+                <h3 class="card__title">Паэлья</h3>
+                <p class="card__description">
+                  Традиционное испанское блюдо — рис, колбаски чоризо, куриное
+                  бедро, кальмар, кукуруза, горошек, специи
+                </p>
+              </div></a
+            >
 
             <button
               type="button"
               class="card__button"
               disabled
             >
-              660 ₽
+              660 ₽ <span class="visually-hidden">Добавить в корзину.</span>
             </button>
-            <a
-              href="/"
-              class="link"
-            ></a>
           </li>
 
           <li class="card">
-            <div class="card__image">
-              <img
-                src="./images/new/boeuf-bourguignon.jpg"
-                alt="Биф Бургеньон"
-                width="304"
-                height="304"
-              />
-            </div>
+            <a
+              href="index.html"
+              class="card__link"
+              ><div class="card__image">
+                <img
+                  src="./images/new/boeuf-bourguignon.webp"
+                  alt="Биф Бургеньон"
+                  width="304"
+                  height="304"
+                  class="cover-image"
+                />
+              </div>
 
-            <div class="card__text">
-              <h3 class="card__title">Биф Бургеньон</h3>
-              <p class="card__description">
-                Блюдо французской кухни — тушёные кусочки говядины с картофелем
-                и болгарским перцем
-              </p>
-            </div>
+              <div class="card__text">
+                <h3 class="card__title">Биф Бургеньон</h3>
+                <p class="card__description">
+                  Блюдо французской кухни — тушёные кусочки говядины с
+                  картофелем и болгарским перцем
+                </p>
+              </div></a
+            >
 
             <button
               type="button"
               class="card__button"
               disabled
             >
-              630 ₽
+              630 ₽ <span class="visually-hidden">Добавить в корзину.</span>
             </button>
-            <a
-              href="/"
-              class="link"
-            ></a>
           </li>
 
           <li class="card">
-            <ul class="card__badge-list">
-              <li class="card__badge-item">
+            <a
+              href="index.html"
+              class="card__link"
+            >
+              <ul class="card__badge-list">
+                <li class="card__badge-item">
+                  <img
+                    src="./images/icons/badges/vegetarian.svg"
+                    alt="Вегетарианское блюдо"
+                    width="36"
+                    height="36"
+                  />
+                </li>
+              </ul>
+
+              <div class="card__image">
                 <img
-                  src="./images/badge/vegetarian.svg"
-                  alt="Вегетарианское блюдо"
+                  src="./images/new/broken-cucumbers.webp"
+                  alt="Битые огурцы"
+                  width="304"
+                  height="304"
+                  class="cover-image"
                 />
-              </li>
-            </ul>
+              </div>
 
-            <div class="card__image">
-              <img
-                src="./images/new/broken-cucumbers.jpg"
-                alt="Битые огурцы"
-                width="304"
-                height="304"
-              />
-            </div>
-
-            <div class="card__text">
-              <h3 class="card__title">Битые огурцы</h3>
-              <p class="card__description">
-                Салат из свежих битых огурцов с уйгурским соусом, кешью и
-                кунжутом
-              </p>
-            </div>
+              <div class="card__text">
+                <h3 class="card__title">Битые огурцы</h3>
+                <p class="card__description">
+                  Салат из свежих битых огурцов с уйгурским соусом, кешью и
+                  кунжутом
+                </p>
+              </div></a
+            >
 
             <button
               type="button"
               class="card__button"
               disabled
             >
-              320 ₽
+              320 ₽ <span class="visually-hidden">Добавить в корзину.</span>
             </button>
-            <a
-              href="/"
-              class="link"
-            ></a>
           </li>
         </ul>
       </section>
@@ -331,157 +401,171 @@
       <!-- ==================== POPULAR ==================== -->
       <section>
         <h2 class="h2">Популярное</h2>
-        <ul class="list">
+        <ul class="cards-list">
           <li class="card">
-            <div class="card__image">
-              <img
-                src="./images/popular/pepperoni.jpg"
-                alt="Пепперони"
-                width="304"
-                height="304"
-              />
-            </div>
+            <a
+              href="index.html"
+              class="card__link"
+            >
+              <div class="card__image">
+                <img
+                  src="./images/popular/pepperoni.webp"
+                  alt="Пепперони"
+                  width="304"
+                  height="304"
+                  class="cover-image"
+                />
+              </div>
 
-            <div class="card__text">
-              <h3 class="card__title">Пепперони</h3>
-              <p class="card__description">
-                Просто и вкусно - томатная основа маринара, колбаски пепперони и
-                сыр моцарелла
-              </p>
-            </div>
+              <div class="card__text">
+                <h3 class="card__title">Пепперони</h3>
+                <p class="card__description">
+                  Просто и вкусно - томатная основа маринара, колбаски пепперони
+                  и сыр моцарелла
+                </p>
+              </div>
+            </a>
 
             <button
               type="button"
               class="card__button"
               disabled
             >
-              660 ₽
+              660 ₽ <span class="visually-hidden">Добавить в корзину.</span>
             </button>
-            <a
-              href="/"
-              class="link"
-            ></a>
           </li>
 
           <li class="card">
-            <ul class="card__badge-list">
-              <li class="card__badge-item">
+            <a
+              href="index.html"
+              class="card__link"
+            >
+              <ul class="card__badge-list">
+                <li class="card__badge-item">
+                  <img
+                    src="./images/icons/badges/vegetarian.svg"
+                    alt="Вегетарианское блюдо"
+                    width="36"
+                    height="36"
+                  />
+                </li>
+              </ul>
+
+              <div class="card__image">
                 <img
-                  src="./images/badge/vegetarian.svg"
-                  alt="Вегетарианское блюдо"
+                  src="./images/popular/pear-gorgonzola.webp"
+                  alt="Груша Горгонзола"
+                  width="304"
+                  height="304"
+                  class="cover-image"
                 />
-              </li>
-            </ul>
+              </div>
 
-            <div class="card__image">
-              <img
-                src="./images/popular/pear-gorgonzola.jpg"
-                alt="Груша Горгонзола"
-                width="304"
-                height="304"
-              />
-            </div>
-
-            <div class="card__text">
-              <h3 class="card__title">Груша Горгонзола</h3>
-              <p class="card__description">
-                Нежная пицца на основе сливочного соуса с сыром горгондзола,
-                грушей, медом и кедровыми орехами
-              </p>
-            </div>
+              <div class="card__text">
+                <h3 class="card__title">Груша Горгонзола</h3>
+                <p class="card__description">
+                  Нежная пицца на основе сливочного соуса с сыром горгондзола,
+                  грушей, медом и кедровыми орехами
+                </p>
+              </div>
+            </a>
 
             <button
               type="button"
               class="card__button"
               disabled
             >
-              780 ₽
+              780 ₽ <span class="visually-hidden">Добавить в корзину.</span>
             </button>
-            <a
-              href="/"
-              class="link"
-            ></a>
           </li>
 
           <li class="card">
-            <div class="card__image">
-              <img
-                src="./images/popular/pho-bo.jpg"
-                alt="Фо Бо"
-                width="304"
-                height="304"
-              />
-            </div>
+            <a
+              href="index.html"
+              class="card__link"
+            >
+              <div class="card__image">
+                <img
+                  src="./images/popular/pho-bo.webp"
+                  alt="Фо Бо"
+                  width="304"
+                  height="304"
+                  class="cover-image"
+                />
+              </div>
 
-            <div class="card__text">
-              <h3 class="card__title">Фо Бо</h3>
-              <p class="card__description">
-                Вьетнамский суп с рисовой лапшой, в котором используется
-                говядина, свежая зелень и ростки сои. Подают с добавками, такими
-                как мята, долька лайма, острый соус шрирача, азиатский уксус и
-                лаоганма
-              </p>
-            </div>
+              <div class="card__text">
+                <h3 class="card__title">Фо Бо</h3>
+                <p class="card__description">
+                  Вьетнамский суп с рисовой лапшой, в котором используется
+                  говядина, свежая зелень и ростки сои. Подают с добавками,
+                  такими как мята, долька лайма, острый соус шрирача, азиатский
+                  уксус и лаоганма
+                </p>
+              </div>
+            </a>
 
             <button
               type="button"
               class="card__button"
               disabled
             >
-              490 ₽
+              490 ₽ <span class="visually-hidden">Добавить в корзину.</span>
             </button>
-            <a
-              href="/"
-              class="link"
-            ></a>
           </li>
 
           <li class="card">
-            <ul class="card__badge-list">
-              <li class="card__badge-item">
-                <img
-                  src="./images/badge/sharp.svg"
-                  alt="Острое блюдо"
-                />
-              </li>
-              <li class="card__badge-item">
-                <img
-                  src="./images/badge/seafood.svg"
-                  alt="Блюдо с морепродуктами"
-                />
-              </li>
-            </ul>
+            <a
+              href="index.html"
+              class="card__link"
+            >
+              <ul class="card__badge-list">
+                <li class="card__badge-item">
+                  <img
+                    src="./images/icons/badges/sharp.svg"
+                    alt="Острое блюдо"
+                    width="36"
+                    height="36"
+                  />
+                </li>
+                <li class="card__badge-item">
+                  <img
+                    src="./images/icons/badges/seafood.svg"
+                    alt="Блюдо с морепродуктами"
+                    width="36"
+                    height="36"
+                  />
+                </li>
+              </ul>
 
-            <div class="card__image">
-              <img
-                src="./images/popular/tom-yum-with-seafood.jpg"
-                alt="Том Ям с морепродуктами"
-                width="304"
-                height="304"
-              />
-            </div>
+              <div class="card__image">
+                <img
+                  src="./images/popular/tom-yum-with-seafood.webp"
+                  alt="Том Ям с морепродуктами"
+                  width="304"
+                  height="304"
+                  class="cover-image"
+                />
+              </div>
 
-            <div class="card__text">
-              <h3 class="card__title">Том Ям с морепродуктами</h3>
-              <p class="card__description">
-                Традиционный тайский суп, на основе кокосового молока и сливок,
-                с добавлением креветок, кальмаров, грибов шиитаке и шампиньонов,
-                помидоров черри и свежей зелени. Подается с паровым тайским
-                рисом
-              </p>
-            </div>
+              <div class="card__text">
+                <h3 class="card__title">Том Ям с морепродуктами</h3>
+                <p class="card__description">
+                  Традиционный тайский суп, на основе кокосового молока и
+                  сливок, с добавлением креветок, кальмаров, грибов шиитаке и
+                  шампиньонов, помидоров черри и свежей зелени. Подается с
+                  паровым тайским рисом
+                </p>
+              </div>
+            </a>
 
             <button
               type="button"
               class="card__button"
               disabled
             >
-              590 ₽
+              590 ₽ <span class="visually-hidden">Добавить в корзину.</span>
             </button>
-            <a
-              href="/"
-              class="link"
-            ></a>
           </li>
         </ul>
       </section>

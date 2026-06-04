@@ -1,0 +1,16 @@
+:root {
+  --section-padding-y: 32px;
+
+  --header-gradient: linear-gradient(90deg, #fedd2c 0%, #f9c201 100%);
+  --header-text-color: #555;
+
+  --menu-card-gradient: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 50%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+
+  --black-color: #1c1c1c;
+
+  --border-radius: 16px;
+}
