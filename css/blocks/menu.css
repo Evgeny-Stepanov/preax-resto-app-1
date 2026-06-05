@@ -1,27 +1,7 @@
 .menu__link {
-  position: relative;
-  display: flex;
-  flex-direction: column;
   justify-content: end;
   height: 304px;
   padding: 16px;
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0) 50%,
-    rgba(0, 0, 0, 0.5) 100%
-  );
-
-  img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-  }
-}
-
-.menu__link,
-.menu__link img {
-  border-radius: var(--border-radius);
 }
 
 .menu__item-title {

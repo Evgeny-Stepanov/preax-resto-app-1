@@ -1,17 +1,17 @@
-.cards-list {
+.food-cards-list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 32px;
 }
 
-.card {
+.food-card {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 16px;
 }
 
-.card__link {
+.food-card__link {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -19,7 +19,7 @@
   min-height: 396px;
 }
 
-.card__badge-list {
+.food-card__badges-list {
   position: absolute;
   top: 8px;
   right: 8px;
@@ -30,7 +30,7 @@
   gap: 8px;
 }
 
-.card__badge-item {
+.food-card__badge-item {
   width: 36px;
   height: 36px;
 
@@ -39,16 +39,16 @@
   }
 }
 
-.card__image {
+.food-card__image {
   width: 304px;
   height: 304px;
 
   img {
-    border-radius: var(--border-radius);
+    border-radius: var(--border-radius-m);
   }
 }
 
-.card__title {
+.food-card__title {
   margin-bottom: 4px;
   font-size: 18px;
   line-height: 1.3333;
@@ -56,7 +56,7 @@
   color: var(--black-color);
 }
 
-.card__description {
+.food-card__description {
   display: -webkit-box;
   -webkit-line-clamp: 2;
   line-clamp: 2;
@@ -65,7 +65,7 @@
   overflow: hidden;
 }
 
-.card__button {
+.food-card__button {
   width: 100%;
   padding: 16px 24px;
   font-size: 18px;
@@ -73,5 +73,5 @@
   font-weight: 600;
   color: var(--black-color);
   background-color: #f4f4f4;
-  border-radius: var(--border-radius);
+  border-radius: var(--border-radius-m);
 }

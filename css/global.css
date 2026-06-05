@@ -42,3 +42,36 @@ section {
   height: 100%;
   object-fit: cover;
 }
+
+.absolute-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.link {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: var(--card-gradient);
+}
+
+.link,
+.link img {
+  border-radius: var(--border-radius-m);
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 56px;
+  font-size: 18px;
+  line-height: 1.3333;
+  font-weight: 600;
+  background-color: transparent;
+  border: var(--border-width) solid var(--black-color);
+  border-radius: var(--border-radius-m);
+}
