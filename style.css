@@ -1,10 +1,13 @@
-@import "./css/normalize.css";
-@import "./css/fonts.css";
-@import "./css/variables.css";
-@import "./css/global.css";
+@import "./styles/normalize.css";
+@import "./styles/fonts.css";
+@import "./styles/variables.css";
+@import "./styles/global.css";
+@import "./styles/utils.css";
 
-@import "./css/blocks/promo.css";
-@import "./css/blocks/header.css";
-@import "./css/blocks/menu.css";
-@import "./css/blocks/food-cards.css";
-@import "./css/blocks/link-cards.css";
+@import "./styles/blocks/promo.css";
+@import "./styles/blocks/header.css";
+@import "./styles/blocks/menu.css";
+@import "./styles/blocks/cards.css";
+@import "./styles/blocks/dishes.css";
+@import "./styles/blocks/sales.css";
+@import "./styles/blocks/button.css";

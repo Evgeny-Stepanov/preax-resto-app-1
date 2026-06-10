@@ -1,0 +1,18 @@
+.menu {
+  .menu__cards {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.menu__card {
+  .card__link {
+    justify-content: end;
+    height: 304px;
+    padding: var(--size-2xl);
+  }
+
+  .card__title {
+    font-size: var(--size-3xl);
+    line-height: 1.33333;
+  }
+}

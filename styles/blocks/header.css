@@ -1,0 +1,89 @@
+.header {
+  font-weight: 600;
+  color: var(--header-text-color);
+  background: var(--header-gradient);
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    padding-block: var(--size-2xl);
+  }
+}
+
+.logo {
+  flex-shrink: 0;
+  width: 137px;
+  height: 22px;
+}
+
+.navigation__list {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: var(--size-3xl);
+  row-gap: 10px;
+}
+
+.navigation__link {
+  padding-block: var(--size-lg);
+}
+
+.header__interactive {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 64px;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.33333;
+}
+
+.contacts__phone {
+  align-self: end;
+  font-size: 18px;
+  letter-spacing: -0.4px;
+}
+
+.contacts__schedule {
+  font-size: var(--size-xl);
+  font-weight: 400;
+  letter-spacing: -0.1px;
+}
+
+.user-tools {
+  display: flex;
+  gap: var(--size-2xl);
+}
+
+.user-tools__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 56px;
+  height: 48px;
+  border: var(--border-width) solid var(--dark-color);
+  border-radius: var(--border-radius-2xl);
+}
+
+.user-tools__button--is-account {
+  background-color: transparent;
+
+  .user-tools__icon {
+    width: var(--size-2xl);
+    height: 20px;
+  }
+}
+
+.user-tools__button--is-cart {
+  background-color: var(--dark-color);
+
+  .user-tools__icon {
+    width: 18px;
+    height: 18px;
+    color: #ffffff;
+  }
+}

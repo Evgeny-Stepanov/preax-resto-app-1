@@ -1,4 +1,4 @@
 # RestoApp
 
-Ник - EvgeniyStepanov
-Имя - Евгений
+**Ник** - EvgeniyStepanov
+**Имя** - Евгений
