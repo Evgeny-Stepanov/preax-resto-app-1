@@ -68,6 +68,11 @@ body {
   min-height: 100%;
 }
 
+hr {
+  margin: 0;
+  border: none;
+}
+
 a {
   color: inherit;
   text-decoration: none;

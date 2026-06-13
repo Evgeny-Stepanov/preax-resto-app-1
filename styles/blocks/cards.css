@@ -9,7 +9,7 @@
   justify-content: space-between;
   height: 360px;
   padding: var(--size-4xl);
-  color: #ffffff;
+  color: var(--light-color);
   background: var(--card-gradient);
 }
 

@@ -16,6 +16,15 @@
   overflow: hidden !important;
 }
 
+.logo-wrapper {
+  flex-shrink: 0;
+}
+
+.logo {
+  width: 137px;
+  height: 22px;
+}
+
 .h2 {
   margin-bottom: var(--size-4xl);
   font-size: 40px;
@@ -41,4 +50,8 @@
   top: 0;
   left: 0;
   z-index: -1;
+}
+
+.hide {
+  display: none !important;
 }

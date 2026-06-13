@@ -9,9 +9,11 @@
 
   --section-padding-y: var(--size-4xl);
 
-  --header-text-color: #555;
+  --header-text-color: #555555;
+  --footer-text-color: #a6a6a6;
   --dark-color: #1c1c1c;
   --gray-color: #727272;
+  --light-color: #ffffff;
 
   --card-badge-background: rgba(0, 0, 0, 0.6);
   --card-status-positive: #fedd2c;
@@ -25,6 +27,9 @@
   );
 
   --border-width: var(--size-xs);
+  --border-radius-sm: var(--size-sm);
   --border-radius-lg: var(--size-lg);
   --border-radius-2xl: var(--size-2xl);
+
+  --transition-duration: 0.2s;
 }

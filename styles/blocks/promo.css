@@ -32,5 +32,5 @@
 .promo__icon {
   width: var(--size-lg);
   height: var(--size-lg);
-  color: #ffffff;
+  color: var(--light-color);
 }

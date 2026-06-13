@@ -11,6 +11,10 @@
       rel="stylesheet"
       href="./style.css"
     />
+    <script
+      src="script.js"
+      defer
+    ></script>
   </head>
 
   <body>
@@ -22,7 +26,7 @@
           class="promo__button"
           aria-label="Скрыть промо акцию"
         >
-          <div class="promo__icon-wrapper">
+          <span class="promo__icon-wrapper">
             <svg
               width="8"
               height="8"
@@ -31,25 +35,31 @@
             >
               <use href="./images/sprite.svg#cross"></use>
             </svg>
-          </div>
+          </span>
         </button>
       </aside>
 
       <div class="container">
         <a
           href="index.html"
-          class="logo"
+          class="logo-wrapper"
           title="На главную"
+          aria-label="Resto App, главная страница"
         >
-          <img
-            src="./images/logo.svg"
+          <svg
             width="137"
             height="22"
-            alt="Resto App, главная страница"
-          />
+            class="logo header__logo"
+            aria-hidden="true"
+          >
+            <use href="./images/sprite.svg#logo"></use>
+          </svg>
         </a>
 
-        <nav class="navigation">
+        <nav
+          class="navigation"
+          aria-label="Верхнее меню"
+        >
           <ul class="navigation__list">
             <li>
               <a
@@ -899,5 +909,275 @@
         </ul>
       </section>
     </main>
+
+    <footer class="footer">
+      <div class="container">
+        <address class="contacts footer__contacts">
+          <div class="contacts__text">
+            <a
+              href="tel:+01234567890"
+              class="contacts__phone"
+              title="Позвонить"
+            >
+              +0 (123) 456 78-90
+            </a>
+            <p class="contacts__schedule">
+              Прием заказов с
+              <time datetime="10:00">10:00</time>
+              до
+              <time datetime="22:40">22:40</time>
+            </p>
+          </div>
+          <ul class="contacts__socials">
+            <li>
+              <a
+                href="index.html"
+                class="contacts__social"
+                target="_blank"
+                aria-label="Перейти в Телеграм"
+              >
+                <svg
+                  width="18"
+                  height="15"
+                  class="contacts__social-icon contacts__social-icon--is-telegram"
+                  aria-hidden="true"
+                >
+                  <use href="./images/sprite.svg#telegram"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a
+                href="index.html"
+                class="contacts__social"
+                target="_blank"
+                aria-label="Перейти во Вконтакте"
+              >
+                <svg
+                  width="20"
+                  height="12"
+                  class="contacts__social-icon contacts__social-icon--is-vk"
+                  aria-hidden="true"
+                >
+                  <use href="./images/sprite.svg#vk"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a
+                href="index.html"
+                class="contacts__social"
+                target="_blank"
+                aria-label="Перейти в Ватсап"
+              >
+                <svg
+                  width="19"
+                  height="20"
+                  class="contacts__social-icon contacts__social-icon--is-whats-app"
+                  aria-hidden="true"
+                >
+                  <use href="./images/sprite.svg#whats-app"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </address>
+
+        <div class="footer__main">
+          <div class="logo-wrapper">
+            <svg
+              width="137"
+              height="22"
+              class="logo footer__logo"
+              aria-label="Resto App"
+            >
+              <use href="./images/sprite.svg#logo"></use>
+            </svg>
+          </div>
+
+          <nav
+            class="navigation footer__navigation"
+            aria-label="Нижнее меню"
+          >
+            <ul class="navigation__list">
+              <li>
+                <a
+                  href="index.html"
+                  class="navigation__link"
+                >
+                  Меню
+                </a>
+              </li>
+              <li>
+                <a
+                  href="index.html"
+                  class="navigation__link"
+                >
+                  Акции
+                </a>
+              </li>
+              <li>
+                <a
+                  href="index.html"
+                  class="navigation__link"
+                >
+                  О нас
+                </a>
+              </li>
+              <li>
+                <a
+                  href="index.html"
+                  class="navigation__link"
+                >
+                  События
+                </a>
+              </li>
+              <li>
+                <a
+                  href="index.html"
+                  class="navigation__link"
+                >
+                  Зоны доставки
+                </a>
+              </li>
+            </ul>
+          </nav>
+
+          <ul class="footer__stores">
+            <li>
+              <a
+                href="index.html"
+                class="footer__store"
+                target="_blank"
+                aria-label="Загрузить в App Store"
+              >
+                <svg
+                  width="138"
+                  height="40"
+                  class="footer__store-icon"
+                  aria-hidden="true"
+                >
+                  <use href="./images/sprite.svg#app-store"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a
+                href="index.html"
+                class="footer__store"
+                target="_blank"
+                aria-label="Загрузить в Google Play"
+              >
+                <svg
+                  width="138"
+                  height="40"
+                  class="footer__store-icon"
+                  aria-hidden="true"
+                >
+                  <use href="./images/sprite.svg#google-play"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer__legal">
+          <p class="footer__copyright">Copyright 2024</p>
+
+          <nav aria-label="Правовая информация">
+            <ul class="footer__docs">
+              <li>
+                <a
+                  href="index.html"
+                  class="footer__docs-link"
+                >
+                  Условия оплаты, получения и возврата
+                </a>
+              </li>
+              <li>
+                <a
+                  href="index.html"
+                  class="footer__docs-link"
+                >
+                  Политика обработки персональных данных
+                </a>
+              </li>
+              <li>
+                <a
+                  href="index.html"
+                  class="footer__docs-link"
+                >
+                  Согласие на обработку персональных данных
+                </a>
+              </li>
+            </ul>
+          </nav>
+
+          <ul class="footer__cards">
+            <li>
+              <a
+                href="#"
+                class="footer__card"
+                aria-label="Оплата картой виза"
+              >
+                <svg
+                  width="32"
+                  height="11"
+                  class="footer__card-icon footer__card-icon--is-visa"
+                  aria-hidden="true"
+                >
+                  <use href="./images/sprite.svg#visa"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="footer__card"
+                aria-label="Оплата картой мастеркард"
+              >
+                <svg
+                  width="22"
+                  height="14"
+                  class="footer__card-icon footer__card-icon--is-mastercard"
+                  aria-hidden="true"
+                >
+                  <use href="./images/sprite.svg#mastercard"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="footer__card"
+                aria-label="Оплата картой мир"
+              >
+                <svg
+                  width="32"
+                  height="10"
+                  class="footer__card-icon footer__card-icon--is-mir"
+                  aria-hidden="true"
+                >
+                  <use href="./images/sprite.svg#mir"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <hr class="footer__divider" />
+
+        <p class="footer__internship">
+          Проект выполнен в рамках стажировки
+          <a
+            href="https://preax.ru"
+            class="footer__internship-link"
+            target="_blank"
+          >
+            PREAX
+          </a>
+        </p>
+      </div>
+    </footer>
   </body>
 </html>

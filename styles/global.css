@@ -15,6 +15,10 @@ section {
   }
 }
 
+a {
+  transition: color var(--transition-duration);
+}
+
 .link {
   position: relative;
   display: flex;

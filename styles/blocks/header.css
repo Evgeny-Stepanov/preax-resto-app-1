@@ -12,10 +12,8 @@
   }
 }
 
-.logo {
-  flex-shrink: 0;
-  width: 137px;
-  height: 22px;
+.header__logo {
+  color: var(--dark-color);
 }
 
 .navigation__list {
@@ -27,6 +25,13 @@
 
 .navigation__link {
   padding-block: var(--size-lg);
+}
+
+.navigation__link,
+.contacts__phone {
+  &:hover {
+    color: var(--dark-color);
+  }
 }
 
 .header__interactive {
@@ -65,13 +70,20 @@
   align-items: center;
   width: 56px;
   height: 48px;
-  border: var(--border-width) solid var(--dark-color);
+  background-color: var(--dark-color);
   border-radius: var(--border-radius-2xl);
+  transition: background-color var(--transition-duration);
+
+  &:hover {
+    background-color: var(--light-color);
+
+    .user-tools__icon {
+      color: var(--dark-color);
+    }
+  }
 }
 
 .user-tools__button--is-account {
-  background-color: transparent;
-
   .user-tools__icon {
     width: var(--size-2xl);
     height: 20px;
@@ -79,11 +91,13 @@
 }
 
 .user-tools__button--is-cart {
-  background-color: var(--dark-color);
-
   .user-tools__icon {
     width: 18px;
     height: 18px;
-    color: #ffffff;
   }
+}
+
+.user-tools__icon {
+  color: var(--light-color);
+  transition: color var(--transition-duration);
 }

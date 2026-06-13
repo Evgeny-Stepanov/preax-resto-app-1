@@ -36,7 +36,7 @@
 }
 
 .dish__icon {
-  color: #ffffff;
+  color: var(--light-color);
 }
 
 .dish__badge--is-seafood {
