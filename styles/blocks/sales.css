@@ -1,0 +1,9 @@
+.sales {
+  .card__badge {
+    width: fit-content;
+  }
+}
+
+.sales__button {
+  margin-top: var(--size-4xl);
+}

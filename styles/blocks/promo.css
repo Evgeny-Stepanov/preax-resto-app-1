@@ -1,0 +1,36 @@
+.promo {
+  display: flex;
+  justify-content: center;
+  gap: var(--size-xl);
+  padding-block: var(--size-xl);
+  background-color: var(--color-neutral-100);
+}
+
+.promo__text {
+  font-size: 18px;
+  line-height: 1.33333;
+  color: #fff;
+}
+
+.promo__button {
+  width: var(--size-3xl);
+  height: var(--size-3xl);
+  padding: var(--size-xs);
+  background-color: transparent;
+}
+
+.promo__icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  background-color: #393939;
+  border-radius: 50%;
+}
+
+.promo__icon {
+  width: var(--size-lg);
+  height: var(--size-lg);
+  color: var(--color-neutral-900);
+}

@@ -1,0 +1,14 @@
+@import "./styles/normalize.css";
+@import "./styles/fonts.css";
+@import "./styles/variables.css";
+@import "./styles/global.css";
+@import "./styles/utils.css";
+
+@import "./styles/blocks/promo.css";
+@import "./styles/blocks/header.css";
+@import "./styles/blocks/menu.css";
+@import "./styles/blocks/cards.css";
+@import "./styles/blocks/dishes.css";
+@import "./styles/blocks/sales.css";
+@import "./styles/blocks/button.css";
+@import "./styles/blocks/footer.css";

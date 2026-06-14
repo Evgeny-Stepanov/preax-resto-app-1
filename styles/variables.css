@@ -1,0 +1,35 @@
+:root {
+  --size-xs: 2px;
+  --size-sm: 4px;
+  --size-lg: 8px;
+  --size-xl: 12px;
+  --size-2xl: 16px;
+  --size-3xl: 24px;
+  --size-4xl: 32px;
+
+  --section-padding-y: var(--size-4xl);
+
+  --color-neutral-100: #1c1c1c;
+  --color-neutral-300: #555555;
+  --color-neutral-500: #727272;
+  --color-neutral-700: #a6a6a6;
+  --color-neutral-900: #ffffff;
+
+  --card-badge-background: rgba(0, 0, 0, 0.6);
+  --card-status-positive: #fedd2c;
+  --card-status-negative: var(--color-neutral-500);
+
+  --header-gradient: linear-gradient(90deg, #fedd2c 0%, #f9c201 100%);
+  --card-gradient: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 50%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+
+  --border-width: var(--size-xs);
+  --border-radius-sm: var(--size-sm);
+  --border-radius-lg: var(--size-lg);
+  --border-radius-2xl: var(--size-2xl);
+
+  --transition-duration: 0.2s;
+}

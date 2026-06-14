@@ -1,0 +1,119 @@
+.header {
+  font-weight: 600;
+  color: var(--color-neutral-300);
+  background: var(--header-gradient);
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    padding-block: var(--size-2xl);
+  }
+}
+
+.header__logo {
+  color: var(--color-neutral-100);
+}
+
+.navigation__list {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: var(--size-3xl);
+  row-gap: 10px;
+}
+
+.navigation__link {
+  padding-block: var(--size-lg);
+}
+
+.navigation__link,
+.contacts__phone {
+  &:hover,
+  &:focus-visible {
+    color: var(--color-neutral-100);
+  }
+}
+
+.header__interactive {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 64px;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.33333;
+}
+
+.contacts__phone {
+  align-self: end;
+  font-size: 18px;
+  letter-spacing: -0.4px;
+}
+
+.contacts__schedule {
+  font-size: var(--size-xl);
+  font-weight: 400;
+  letter-spacing: -0.1px;
+}
+
+.user-tools {
+  display: flex;
+  gap: var(--size-2xl);
+}
+
+.user-tools__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 56px;
+  height: 48px;
+  border: var(--border-width) solid var(--color-neutral-100);
+  border-radius: var(--border-radius-2xl);
+  transition: background-color var(--transition-duration);
+}
+
+.user-tools__button--is-account {
+  background-color: transparent;
+
+  .user-tools__icon {
+    width: var(--size-2xl);
+    height: 20px;
+    color: var(--color-neutral-100);
+  }
+
+  &:hover,
+  &:focus-visible {
+    background-color: var(--color-neutral-100);
+
+    .user-tools__icon {
+      color: var(--color-neutral-900);
+    }
+  }
+}
+
+.user-tools__button--is-cart {
+  background-color: var(--color-neutral-100);
+
+  .user-tools__icon {
+    width: 18px;
+    height: 18px;
+    color: var(--color-neutral-900);
+  }
+
+  &:hover,
+  &:focus-visible {
+    background-color: transparent;
+
+    .user-tools__icon {
+      color: var(--color-neutral-100);
+    }
+  }
+}
+
+.user-tools__icon {
+  transition: color var(--transition-duration);
+}

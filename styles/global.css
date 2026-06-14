@@ -1,0 +1,36 @@
+body {
+  min-width: 1440px;
+  font-family: "Inter", sans-serif;
+  font-variant-numeric: lining-nums tabular-nums;
+  font-size: var(--size-2xl);
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+section {
+  padding-block: var(--section-padding-y);
+
+  &:last-child {
+    padding-bottom: calc(var(--section-padding-y) * 2);
+  }
+}
+
+a {
+  transition: color var(--transition-duration);
+
+  &:focus-visible {
+    outline-offset: 5px;
+  }
+}
+
+.link {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: var(--card-gradient);
+}
+
+.link,
+.link img {
+  border-radius: var(--border-radius-2xl);
+}

@@ -1,0 +1,204 @@
+.footer {
+  padding-block: var(--section-padding-y);
+  color: var(--color-neutral-700);
+  background-color: var(--color-neutral-100);
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-4xl);
+  }
+
+  .navigation__link,
+  .contacts__phone {
+    &:hover,
+    &:focus-visible {
+      color: var(--color-neutral-700);
+    }
+  }
+}
+
+.footer__contacts {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 100px;
+
+  .contacts__phone {
+    font-size: var(--size-3xl);
+    font-weight: 600;
+    letter-spacing: -0.6px;
+    color: #f4f4f4;
+  }
+
+  .contacts__schedule {
+    margin-top: var(--size-sm);
+    font-size: 14px;
+    line-height: 1.42857;
+  }
+
+  .contacts__socials {
+    display: flex;
+    gap: var(--size-lg);
+  }
+
+  .contacts__social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 40px;
+    height: 40px;
+    background-color: #393939;
+    border-radius: var(--border-radius-lg);
+  }
+
+  .contacts__social-icon--is-telegram {
+    width: 18px;
+    height: 15px;
+  }
+
+  .contacts__social-icon--is-vk {
+    width: 20px;
+    height: var(--size-xl);
+  }
+
+  .contacts__social-icon--is-whats-app {
+    width: 19px;
+    height: 20px;
+  }
+}
+
+.footer__main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+}
+
+.footer__logo {
+  margin-right: 147px;
+}
+
+.footer__navigation {
+  .navigation__list {
+    column-gap: var(--size-4xl);
+    letter-spacing: 0.3px;
+  }
+
+  .navigation__link {
+    padding-block: 0;
+    color: #f4f4f4;
+  }
+}
+
+.footer__stores {
+  display: flex;
+  flex-shrink: 0;
+  gap: var(--size-lg);
+}
+
+.footer__stores li,
+.footer__store-icon {
+  width: 138px;
+  height: 40px;
+}
+
+.footer__store {
+  &:hover,
+  &:focus-visible {
+    .footer__store-icon {
+      --play-opacity: 1;
+    }
+  }
+}
+
+@property --play-opacity {
+  syntax: "<number>";
+  inherits: true;
+  initial-value: 0.5;
+}
+
+.footer__store-icon {
+  --play-opacity: 0.5;
+  transition: --play-opacity var(--transition-duration);
+}
+
+.footer__legal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 63px;
+  font-size: 14px;
+  line-height: 1.42857;
+}
+
+.footer__copyright {
+  flex-shrink: 0;
+}
+
+.footer__documents {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--size-2xl);
+}
+
+.footer__cards {
+  display: flex;
+  flex-shrink: 0;
+  gap: var(--size-lg);
+}
+
+.footer__card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 29px;
+  background-color: #393939;
+  border-radius: var(--border-radius-sm);
+  pointer-events: none;
+}
+
+.footer__card-icon--is-visa {
+  width: var(--size-4xl);
+  height: 11px;
+}
+
+.footer__card-icon--is-mastercard {
+  width: 22px;
+  height: 14px;
+}
+
+.footer__card-icon--is-mir {
+  width: var(--size-4xl);
+  height: 10px;
+}
+
+.footer__divider {
+  height: 1px;
+  background: #393939;
+}
+
+.footer__internship {
+  font-size: 14px;
+  line-height: 1.42857;
+  text-align: center;
+}
+
+.footer__internship-link {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.footer__contacts .contacts__social:hover,
+.footer__contacts .contacts__social:focus-visible,
+.footer__logo,
+.footer__store:hover,
+.footer__store:focus-visible,
+.footer__document:hover,
+.footer__document:focus-visible,
+.footer__internship-link:hover,
+.footer__internship-link:focus-visible {
+  color: var(--color-neutral-900);
+}
