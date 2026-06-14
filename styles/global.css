@@ -17,6 +17,10 @@ section {
 
 a {
   transition: color var(--transition-duration);
+
+  &:focus-visible {
+    outline-offset: 5px;
+  }
 }
 
 .link {

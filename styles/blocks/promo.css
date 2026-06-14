@@ -3,7 +3,7 @@
   justify-content: center;
   gap: var(--size-xl);
   padding-block: var(--size-xl);
-  background-color: var(--dark-color);
+  background-color: var(--color-neutral-100);
 }
 
 .promo__text {
@@ -32,5 +32,5 @@
 .promo__icon {
   width: var(--size-lg);
   height: var(--size-lg);
-  color: var(--light-color);
+  color: var(--color-neutral-900);
 }

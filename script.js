@@ -9,6 +9,10 @@ const promoCloseButtonHandleClick = () => {
 };
 
 const hideElement = (element) => {
+  if (!(element instanceof HTMLElement)) {
+    throw new Error("Аргумент не является HTML-элементом");
+  }
+
   element.classList.add("hide");
 };
 

@@ -1,7 +1,7 @@
 .footer {
   padding-block: var(--section-padding-y);
-  color: var(--footer-text-color);
-  background-color: var(--dark-color);
+  color: var(--color-neutral-700);
+  background-color: var(--color-neutral-100);
 
   .container {
     display: flex;
@@ -11,8 +11,9 @@
 
   .navigation__link,
   .contacts__phone {
-    &:hover {
-      color: var(--footer-text-color);
+    &:hover,
+    &:focus-visible {
+      color: var(--color-neutral-700);
     }
   }
 }
@@ -95,15 +96,17 @@
   display: flex;
   flex-shrink: 0;
   gap: var(--size-lg);
+}
 
-  li {
-    width: 138px;
-    height: 40px;
-  }
+.footer__stores li,
+.footer__store-icon {
+  width: 138px;
+  height: 40px;
 }
 
 .footer__store {
-  &:hover {
+  &:hover,
+  &:focus-visible {
     .footer__store-icon {
       --play-opacity: 1;
     }
@@ -118,8 +121,6 @@
 
 .footer__store-icon {
   --play-opacity: 0.5;
-  width: 138px;
-  height: 40px;
   transition: --play-opacity var(--transition-duration);
 }
 
@@ -130,14 +131,13 @@
   gap: 63px;
   font-size: 14px;
   line-height: 1.42857;
-  font-weight: 400;
 }
 
 .footer__copyright {
   flex-shrink: 0;
 }
 
-.footer__docs {
+.footer__documents {
   display: flex;
   flex-wrap: wrap;
   gap: var(--size-2xl);
@@ -192,9 +192,13 @@
 }
 
 .footer__contacts .contacts__social:hover,
+.footer__contacts .contacts__social:focus-visible,
 .footer__logo,
 .footer__store:hover,
-.footer__docs-link:hover,
-.footer__internship-link:hover {
-  color: var(--light-color);
+.footer__store:focus-visible,
+.footer__document:hover,
+.footer__document:focus-visible,
+.footer__internship-link:hover,
+.footer__internship-link:focus-visible {
+  color: var(--color-neutral-900);
 }

@@ -5,6 +5,13 @@
   line-height: 1.33333;
   font-weight: 600;
   background-color: transparent;
-  border: var(--border-width) solid var(--dark-color);
+  border: var(--border-width) solid var(--color-neutral-100);
   border-radius: var(--border-radius-2xl);
+  transition: all var(--transition-duration);
+
+  &:hover,
+  &:focus-within {
+    color: var(--color-neutral-900);
+    background-color: var(--color-neutral-100);
+  }
 }

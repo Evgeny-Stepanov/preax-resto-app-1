@@ -1,6 +1,6 @@
 .header {
   font-weight: 600;
-  color: var(--header-text-color);
+  color: var(--color-neutral-300);
   background: var(--header-gradient);
 
   .container {
@@ -13,7 +13,7 @@
 }
 
 .header__logo {
-  color: var(--dark-color);
+  color: var(--color-neutral-100);
 }
 
 .navigation__list {
@@ -29,8 +29,9 @@
 
 .navigation__link,
 .contacts__phone {
-  &:hover {
-    color: var(--dark-color);
+  &:hover,
+  &:focus-visible {
+    color: var(--color-neutral-100);
   }
 }
 
@@ -70,34 +71,49 @@
   align-items: center;
   width: 56px;
   height: 48px;
-  background-color: var(--dark-color);
+  border: var(--border-width) solid var(--color-neutral-100);
   border-radius: var(--border-radius-2xl);
   transition: background-color var(--transition-duration);
+}
 
-  &:hover {
-    background-color: var(--light-color);
+.user-tools__button--is-account {
+  background-color: transparent;
+
+  .user-tools__icon {
+    width: var(--size-2xl);
+    height: 20px;
+    color: var(--color-neutral-100);
+  }
+
+  &:hover,
+  &:focus-visible {
+    background-color: var(--color-neutral-100);
 
     .user-tools__icon {
-      color: var(--dark-color);
+      color: var(--color-neutral-900);
     }
   }
 }
 
-.user-tools__button--is-account {
-  .user-tools__icon {
-    width: var(--size-2xl);
-    height: 20px;
-  }
-}
-
 .user-tools__button--is-cart {
+  background-color: var(--color-neutral-100);
+
   .user-tools__icon {
     width: 18px;
     height: 18px;
+    color: var(--color-neutral-900);
+  }
+
+  &:hover,
+  &:focus-visible {
+    background-color: transparent;
+
+    .user-tools__icon {
+      color: var(--color-neutral-100);
+    }
   }
 }
 
 .user-tools__icon {
-  color: var(--light-color);
   transition: color var(--transition-duration);
 }

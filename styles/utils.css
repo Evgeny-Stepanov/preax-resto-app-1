@@ -30,7 +30,7 @@
   font-size: 40px;
   line-height: 1.2;
   font-weight: 600;
-  color: var(--dark-color);
+  color: var(--color-neutral-100);
 }
 
 .grid {

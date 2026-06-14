@@ -9,15 +9,15 @@
 
   --section-padding-y: var(--size-4xl);
 
-  --header-text-color: #555555;
-  --footer-text-color: #a6a6a6;
-  --dark-color: #1c1c1c;
-  --gray-color: #727272;
-  --light-color: #ffffff;
+  --color-neutral-100: #1c1c1c;
+  --color-neutral-300: #555555;
+  --color-neutral-500: #727272;
+  --color-neutral-700: #a6a6a6;
+  --color-neutral-900: #ffffff;
 
   --card-badge-background: rgba(0, 0, 0, 0.6);
   --card-status-positive: #fedd2c;
-  --card-status-negative: var(--gray-color);
+  --card-status-negative: var(--color-neutral-500);
 
   --header-gradient: linear-gradient(90deg, #fedd2c 0%, #f9c201 100%);
   --card-gradient: linear-gradient(
