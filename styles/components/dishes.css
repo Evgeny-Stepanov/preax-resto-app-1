@@ -1,3 +1,5 @@
+@import url("badge.css");
+
 .dishes {
   grid-template-columns: repeat(4, 1fr);
 }
@@ -27,67 +29,8 @@
 }
 
 .dish__badge {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 36px;
   height: 36px;
-  border-radius: var(--border-radius-lg);
-}
-
-.dish__icon {
-  color: var(--color-neutral-900);
-}
-
-.dish__badge--is-seafood {
-  background-color: #0094e4;
-}
-
-.dish__badge--is-vegetarian {
-  background-color: #1daa0f;
-}
-
-.dish__badge--is-fire {
-  background-color: #eb5545;
-
-  .dish__icon {
-    width: 13px;
-    height: var(--size-2xl);
-  }
-}
-
-.dish__badge--is-chief {
-  background-color: #7760e8;
-
-  .dish__icon {
-    width: var(--size-2xl);
-    height: var(--size-xl);
-  }
-}
-
-.dish__badge--is-beef {
-  background-color: #971f43;
-}
-
-.dish__badge--is-sharp {
-  background-color: #fc7d04;
-}
-
-.dish__badge--is-new {
-  background-color: #244af9;
-
-  .dish__icon {
-    width: 10px;
-    height: var(--size-2xl);
-  }
-}
-
-.dish__badge--is-seafood .dish__icon,
-.dish__badge--is-vegetarian .dish__icon,
-.dish__badge--is-beef .dish__icon,
-.dish__badge--is-sharp .dish__icon {
-  width: var(--size-2xl);
-  height: var(--size-2xl);
 }
 
 .dish__image-wrapper {

@@ -1,0 +1,61 @@
+.badge {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--size-lg);
+
+  svg {
+    color: var(--color-neutral-900);
+  }
+}
+
+.badge--seafood {
+  background-color: #0094e4;
+}
+
+.badge--vegetarian {
+  background-color: #1daa0f;
+}
+
+.badge--fire {
+  background-color: #eb5545;
+
+  svg {
+    width: 13px;
+    height: var(--size-2xl);
+  }
+}
+
+.badge--chief {
+  background-color: #7760e8;
+
+  svg {
+    width: var(--size-2xl);
+    height: var(--size-xl);
+  }
+}
+
+.badge--beef {
+  background-color: #971f43;
+}
+
+.badge--sharp {
+  background-color: #fc7d04;
+}
+
+.badge--new {
+  background-color: #244af9;
+
+  svg {
+    width: 10px;
+    height: var(--size-2xl);
+  }
+}
+
+.badge--seafood svg,
+.badge--vegetarian svg,
+.badge--beef svg,
+.badge--sharp svg {
+  width: var(--size-2xl);
+  height: var(--size-2xl);
+}
