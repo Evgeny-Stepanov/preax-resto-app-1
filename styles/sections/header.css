@@ -71,13 +71,13 @@
   align-items: center;
   width: 56px;
   height: 48px;
-  border: var(--border-width) solid var(--color-neutral-100);
-  border-radius: var(--border-radius-2xl);
+  border-radius: var(--size-2xl);
   transition: background-color var(--transition-duration);
 }
 
 .user-tools__button--is-account {
   background-color: transparent;
+  border: var(--border-width) solid var(--color-neutral-100);
 
   .user-tools__icon {
     width: var(--size-2xl);
@@ -106,7 +106,7 @@
 
   &:hover,
   &:focus-visible {
-    background-color: transparent;
+    background-color: var(--color-neutral-900);
 
     .user-tools__icon {
       color: var(--color-neutral-100);

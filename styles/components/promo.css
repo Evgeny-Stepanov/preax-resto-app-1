@@ -4,12 +4,19 @@
   gap: var(--size-xl);
   padding-block: var(--size-xl);
   background-color: var(--color-neutral-100);
+  transition-property: transform, opacity, height, padding;
+  transition-duration: calc(var(--transition-duration) * 2);
+
+  &.fade-out-up {
+    padding: 0;
+    height: 0 !important;
+  }
 }
 
 .promo__text {
   font-size: 18px;
   line-height: 1.33333;
-  color: #fff;
+  color: var(--color-neutral-900);
 }
 
 .promo__button {
@@ -17,6 +24,21 @@
   height: var(--size-3xl);
   padding: var(--size-xs);
   background-color: transparent;
+
+  &:hover,
+  &:focus-visible {
+    .promo__icon-wrapper {
+      background-color: var(--color-yellow-500);
+    }
+
+    .promo__icon {
+      color: var(--color-neutral-100);
+    }
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
 }
 
 .promo__icon-wrapper {
@@ -27,10 +49,12 @@
   height: 20px;
   background-color: #393939;
   border-radius: 50%;
+  transition: background-color var(--transition-duration);
 }
 
 .promo__icon {
   width: var(--size-lg);
   height: var(--size-lg);
   color: var(--color-neutral-900);
+  transition: color var(--transition-duration);
 }

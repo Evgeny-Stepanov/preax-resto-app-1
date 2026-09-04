@@ -1,0 +1,109 @@
+.modal {
+  position: fixed;
+  inset: 50% auto auto 50%;
+  /* display: flex; */
+  justify-content: center;
+  gap: var(--size-2xl);
+  padding: 0;
+  min-width: 1088px;
+  max-height: calc(100dvh - 64px);
+  background-color: transparent;
+  border: none;
+  border-radius: var(--size-2xl);
+  translate: -50% -50%;
+  /*   overflow: visible; */
+
+  &::backdrop {
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+  }
+}
+
+.modal__content {
+  padding: 32px;
+}
+
+/* 
+.modal__content {
+  display: flex;
+  flex-direction: column;
+  max-height: calc(100dvh - 64px);
+  padding: var(--size-4xl) var(--size-sm) var(--size-4xl) 0;
+  overflow: hidden;
+}
+
+.modal__scroll {
+  padding-inline: var(--size-4xl) 28px;
+  overflow-y: auto;
+  flex: 1 1 auto;
+
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--color-yellow-500);
+    border-radius: var(--size-2xl);
+  }
+
+  &::-webkit-scrollbar-button {
+    display: none;
+  }
+}
+
+@supports (-moz-appearance: none) {
+  .modal__scroll {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-yellow-500) transparent;
+  }
+}
+
+.modal__title {
+  position: sticky;
+  inset: 0 auto auto 0;
+  padding-bottom: var(--size-4xl);
+  font-size: var(--size-4xl);
+  line-height: 1.25;
+  background-color: var(--color-neutral-900);
+}
+
+.modal__text {
+  font-size: 18px;
+  line-height: 1.33333;
+}
+   */
+
+.modal__button {
+  width: 48px;
+  height: 48px;
+  padding: var(--size-xl);
+  background-color: var(--color-neutral-900);
+  box-shadow: 0 var(--size-sm) 10px 0 rgba(0, 0, 0, 0.1);
+
+  &:hover,
+  &:focus-visible {
+    .modal__icon {
+      color: var(--color-yellow-500);
+    }
+  }
+}
+
+.modal__content,
+.modal__button {
+  border-radius: var(--size-2xl);
+}
+
+.modal__icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: var(--size-3xl);
+  height: var(--size-3xl);
+}
+
+.modal__icon {
+  width: 11px;
+  height: 11px;
+  color: var(--color-neutral-500);
+  transition: color var(--transition-duration);
+}

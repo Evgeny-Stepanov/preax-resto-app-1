@@ -1,0 +1,219 @@
+{
+  "currency": "₽",
+  "products": [
+    {
+      "id": "chinese-egg-soup",
+      "img": "images/new/chinese-egg-soup.jpg",
+      "title": "Китайский яичный суп",
+      "badges": [4],
+      "description": "Традиционный китайский суп с&nbsp;яйцом и&nbsp;томатами черри",
+      "sizes": [
+        {
+          "size": "standard",
+          "title": "Стандартный",
+          "price": 350,
+          "g": 450
+        }
+      ],
+      "supplements": []
+    },
+    {
+      "id": "paella",
+      "img": "images/new/paella.jpg",
+      "title": "Паэлья",
+      "badges": [4],
+      "description": "Традиционное испанское блюдо&nbsp;&mdash; рис, колбаски чоризо, куриное бедро, кальмар, кукуруза, горошек, специи",
+      "sizes": [
+        {
+          "size": "standard",
+          "title": "Стандартный",
+          "price": 660,
+          "g": 450
+        }
+      ],
+      "supplements": []
+    },
+    {
+      "id": "beef-bourguignon",
+      "img": "images/new/beef-bourguignon.jpg",
+      "title": "Биф Бургеньон",
+      "badges": [],
+      "description": "Блюдо французской кухни&nbsp;&mdash; тушёные кусочки говядины с&nbsp;картофелем и&nbsp;болгарским перцем",
+      "sizes": [
+        {
+          "size": "standard",
+          "title": "Стандартный",
+          "price": 630,
+          "g": 450
+        }
+      ],
+      "supplements": []
+    },
+    {
+      "id": "smashed-cucumbers",
+      "img": "images/new/smashed-cucumbers.jpg",
+      "title": "Битые огурцы",
+      "badges": [4],
+      "description": "Салат из&nbsp;свежих битых огурцов с&nbsp;уйгурским соусом, кешью и&nbsp;кунжутом",
+      "sizes": [
+        {
+          "size": "standard",
+          "title": "Стандартный",
+          "price": 320,
+          "g": 450
+        }
+      ],
+      "supplements": []
+    },
+    {
+      "id": "pepperoni",
+      "img": "images/popular/pepperoni.jpg",
+      "title": "Пепперони",
+      "badges": [],
+      "description": "Просто и&nbsp;вкусно&nbsp;&mdash; томатная основа маринара, колбаски пепперони и&nbsp;сыр моцарелла",
+      "sizes": [
+        {
+          "size": "standard",
+          "title": "Стандартный",
+          "price": 550,
+          "g": 450
+        },
+        {
+          "size": "big",
+          "title": "Большой",
+          "price": 660,
+          "g": 550
+        }
+      ],
+      "supplements": [1, 2, 3, 4, 5]
+    },
+    {
+      "id": "gorgonzola-pear",
+      "img": "images/popular/gorgonzola-pear.jpg",
+      "title": "Груша Горгонзола",
+      "badges": [4],
+      "description": "Нежная пицца на&nbsp;основе сливочного соуса с&nbsp;сыром горгондзола, грушей, медом и&nbsp;кедровыми орехами",
+      "sizes": [
+        {
+          "size": "standard",
+          "title": "Стандартный",
+          "price": 660,
+          "g": 450
+        },
+        {
+          "size": "big",
+          "title": "Большой",
+          "price": 780,
+          "g": 550
+        }
+      ],
+      "supplements": [1, 2, 3, 4, 5]
+    },
+    {
+      "id": "fo-bo",
+      "img": "images/popular/fo-bo.jpg",
+      "title": "Фо Бо",
+      "badges": [],
+      "description": "Вьетнамский суп с&nbsp;рисовой лапшой, в&nbsp;котором используется говядина, свежая зелень и&nbsp;ростки сои. Подают с&nbsp;добавками, такими как мята, долька лайма, острый соус шрирача, азиатский уксус и&nbsp;лаоганма",
+      "sizes": [
+        {
+          "size": "standard",
+          "title": "Стандартный",
+          "price": 490,
+          "g": 450
+        }
+      ],
+      "supplements": []
+    },
+    {
+      "id": "tom-yam-fish",
+      "img": "images/popular/tom-yam-fish.jpg",
+      "title": "Том Ям с морепродуктами",
+      "badges": [1, 2],
+      "description": "Традиционный тайский суп, на&nbsp;основе кокосового молока и&nbsp;сливок, с&nbsp;добавлением креветок, кальмаров, грибов шиитаке и&nbsp;шампиньонов, помидоров черри и&nbsp;свежей зелени. Подаётся с&nbsp;паровым тайским рисом",
+      "sizes": [
+        {
+          "size": "standard",
+          "title": "Стандартный",
+          "price": 590,
+          "g": 450
+        }
+      ],
+      "supplements": []
+    }
+  ],
+  "badges": [
+    {
+      "id": 1,
+      "icon": "images/sprite.svg#sharp",
+      "title": "Острое"
+    },
+    {
+      "id": 2,
+      "icon": "images/sprite.svg#seafood",
+      "title": "Морепродукты"
+    },
+    {
+      "id": 3,
+      "icon": "images/sprite.svg#new",
+      "title": "Новинка"
+    },
+    {
+      "id": 4,
+      "icon": "images/sprite.svg#vegetarian",
+      "title": "Веган"
+    },
+    {
+      "id": 5,
+      "icon": "images/sprite.svg#fire",
+      "title": "Хит"
+    },
+    {
+      "id": 6,
+      "icon": "images/sprite.svg#chief",
+      "title": "От шефа"
+    },
+    {
+      "id": 7,
+      "icon": "images/sprite.svg#beef",
+      "title": "Говядина"
+    }
+  ],
+  "supplements": [
+    {
+      "id": 1,
+      "title": "Соус блю-чиз к&nbsp;бортам",
+      "img": "images/supplements/blue-cheese-sauce.jpg",
+      "g": null,
+      "price": 60
+    },
+    {
+      "id": 2,
+      "title": "Колбаски пепперони",
+      "img": "images/supplements/pepperoni-sausage.jpg",
+      "g": 30,
+      "price": 100
+    },
+    {
+      "id": 3,
+      "title": "Перец чили",
+      "img": "images/supplements/chili-pepper.jpg",
+      "g": 20,
+      "price": 80
+    },
+    {
+      "id": 4,
+      "title": "Перец халапеньо",
+      "img": "images/supplements/jalapeno-pepper.jpg",
+      "g": 20,
+      "price": 80
+    },
+    {
+      "id": 5,
+      "title": "Чоризо",
+      "img": "",
+      "g": 20,
+      "price": 100
+    }
+  ]
+}

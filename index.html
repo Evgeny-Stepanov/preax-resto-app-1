@@ -9,27 +9,25 @@
     <title>Resto App</title>
     <link
       rel="icon"
-      type="image/png"
-      href="images/favicon/favicon-96x96.png"
-      sizes="96x96"
-    />
-    <link
-      rel="icon"
-      type="image/svg+xml"
-      href="images/favicon/favicon.svg"
-    />
-    <link
-      rel="shortcut icon"
       href="images/favicon/favicon.ico"
+      sizes="any"
     />
     <link
       rel="apple-touch-icon"
       sizes="180x180"
       href="images/favicon/apple-touch-icon.png"
     />
-    <meta
-      name="apple-mobile-web-app-title"
-      content="Resto App"
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/favicon/favicon-16x16.png"
     />
     <link
       rel="manifest"
@@ -41,7 +39,7 @@
     />
     <script
       src="script.js"
-      defer
+      type="module"
     ></script>
   </head>
 
@@ -292,6 +290,7 @@
             <a
               href="index.html"
               class="dish__link"
+              data-dish-id="chinese-egg-soup"
             >
               <ul class="dish__badges">
                 <li
@@ -347,6 +346,7 @@
             <a
               href="index.html"
               class="dish__link"
+              data-dish-id="paella"
             >
               <ul class="dish__badges">
                 <li
@@ -403,15 +403,16 @@
             <a
               href="index.html"
               class="dish__link"
+              data-dish-id="beef-bourguignon"
             >
               <div class="dish__image-wrapper">
                 <picture>
                   <source
-                    srcset="images/new/boeuf-bourguignon.webp"
+                    srcset="images/new/beef-bourguignon.webp"
                     type="image/webp"
                   />
                   <img
-                    src="images/new/boeuf-bourguignon.jpg"
+                    src="images/new/beef-bourguignon.jpg"
                     width="304"
                     height="304"
                     alt="Биф Бургеньон"
@@ -442,6 +443,7 @@
             <a
               href="index.html"
               class="dish__link"
+              data-dish-id="smashed-cucumbers"
             >
               <ul class="dish__badges">
                 <li
@@ -463,11 +465,11 @@
               <div class="dish__image-wrapper">
                 <picture>
                   <source
-                    srcset="images/new/broken-cucumbers.webp"
+                    srcset="images/new/smashed-cucumbers.webp"
                     type="image/webp"
                   />
                   <img
-                    src="images/new/broken-cucumbers.jpg"
+                    src="images/new/smashed-cucumbers.jpg"
                     width="304"
                     height="304"
                     alt="Битые огурцы"
@@ -503,6 +505,7 @@
             <a
               href="index.html"
               class="dish__link"
+              data-dish-id="pepperoni"
             >
               <div class="dish__image-wrapper">
                 <picture>
@@ -543,6 +546,7 @@
             <a
               href="index.html"
               class="dish__link"
+              data-dish-id="gorgonzola-pear"
             >
               <ul class="dish__badges">
                 <li
@@ -564,11 +568,11 @@
               <div class="dish__image-wrapper">
                 <picture>
                   <source
-                    srcset="images/popular/pear-gorgonzola.webp"
+                    srcset="images/popular/gorgonzola-pear.webp"
                     type="image/webp"
                   />
                   <img
-                    src="images/popular/pear-gorgonzola.jpg"
+                    src="images/popular/gorgonzola-pear.jpg"
                     width="304"
                     height="304"
                     alt="Груша Горгонзола"
@@ -600,15 +604,16 @@
             <a
               href="index.html"
               class="dish__link"
+              data-dish-id="fo-bo"
             >
               <div class="dish__image-wrapper">
                 <picture>
                   <source
-                    srcset="images/popular/pho-bo.webp"
+                    srcset="images/popular/fo-bo.webp"
                     type="image/webp"
                   />
                   <img
-                    src="images/popular/pho-bo.jpg"
+                    src="images/popular/fo-bo.jpg"
                     width="304"
                     height="304"
                     alt="Фо Бо"
@@ -642,6 +647,7 @@
             <a
               href="index.html"
               class="dish__link"
+              data-dish-id="tom-yam-fish"
             >
               <ul class="dish__badges">
                 <li
@@ -677,11 +683,11 @@
               <div class="dish__image-wrapper">
                 <picture>
                   <source
-                    srcset="images/popular/tom-yum-with-seafood.webp"
+                    srcset="images/popular/tom-yam-fish.webp"
                     type="image/webp"
                   />
                   <img
-                    src="images/popular/tom-yum-with-seafood.jpg"
+                    src="images/popular/tom-yam-fish.jpg"
                     width="304"
                     height="304"
                     alt="Том Ям с морепродуктами"
@@ -1214,5 +1220,25 @@
         </p>
       </div>
     </footer>
+
+    <dialog class="modal">
+      <div class="modal__content"></div>
+      <button
+        class="modal__button"
+        type="button"
+        aria-label="Закрыть окно"
+      >
+        <span class="modal__icon-wrapper">
+          <svg
+            width="11"
+            height="11"
+            class="modal__icon"
+            aria-hidden="true"
+          >
+            <use href="images/sprite.svg#cross"></use>
+          </svg>
+        </span>
+      </button>
+    </dialog>
   </body>
 </html>

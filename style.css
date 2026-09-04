@@ -3,9 +3,11 @@
 @import "styles/base/variables.css";
 @import "styles/base/global.css";
 @import "styles/base/utils.css";
+@import "styles/base/animations.css";
 
 @import "styles/components/promo.css";
 @import "styles/components/dishes.css";
+@import "styles/components/modal.css";
 @import "styles/components/cards.css";
 @import "styles/components/button.css";
 

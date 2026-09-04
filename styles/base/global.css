@@ -19,7 +19,7 @@ a {
   transition: color var(--transition-duration);
 
   &:focus-visible {
-    outline-offset: 5px;
+    outline-offset: 2px;
   }
 }
 
@@ -32,5 +32,5 @@ a {
 
 .link,
 .link img {
-  border-radius: var(--border-radius-2xl);
+  border-radius: var(--size-2xl);
 }

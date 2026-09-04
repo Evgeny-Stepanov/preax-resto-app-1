@@ -10,7 +10,21 @@
   height: 360px;
   padding: var(--size-4xl);
   color: var(--color-neutral-900);
-  background: var(--card-gradient);
+  transition: transform var(--transition-duration);
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background: var(--card-gradient);
+    transition: opacity var(--transition-duration);
+  }
+
+  &:hover,
+  &:focus-visible {
+    transform: scale(1.03);
+  }
 
   &:focus-visible {
     outline: 2px solid var(--color-neutral-100);
@@ -18,8 +32,9 @@
 }
 
 .card__link,
+.card__link::before,
 .card__image {
-  border-radius: var(--border-radius-2xl);
+  border-radius: var(--size-2xl);
 }
 
 .card__link,
@@ -44,7 +59,7 @@
   font-size: 14px;
   line-height: 1.43333;
   font-weight: 600;
-  border-radius: var(--border-radius-lg);
+  border-radius: var(--size-lg);
 }
 
 .card__badge {
@@ -63,6 +78,7 @@
 }
 
 .card__title {
+  z-index: 1;
   font-size: var(--size-4xl);
   line-height: 1.25;
   font-weight: 600;

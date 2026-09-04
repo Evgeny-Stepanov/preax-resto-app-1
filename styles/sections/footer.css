@@ -50,7 +50,7 @@
     width: 40px;
     height: 40px;
     background-color: #393939;
-    border-radius: var(--border-radius-lg);
+    border-radius: var(--size-lg);
   }
 
   .contacts__social-icon--is-telegram {
@@ -156,7 +156,7 @@
   width: 48px;
   height: 29px;
   background-color: #393939;
-  border-radius: var(--border-radius-sm);
+  border-radius: var(--size-sm);
   pointer-events: none;
 }
 
