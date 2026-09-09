@@ -3,7 +3,7 @@ import { setOwnHeight } from "../base/utils.js";
 export const initPromo = () => {
   const selectors = {
     promo: ".promo",
-    button: ".promo__button",
+    closeButton: ".promo__button",
   };
 
   const cssClasses = {
@@ -18,19 +18,20 @@ export const initPromo = () => {
     return;
   }
 
-  const closeButtonElement = promoElement.querySelector(selectors.button);
+  const closeButtonElement = promoElement.querySelector(selectors.closeButton);
 
-  const handleTransitionEnd = () => {
-    promoElement.classList.remove(cssClasses.fadeOut);
-    promoElement.classList.add(cssClasses.hide);
-    promoElement.removeAttribute("style");
+  const handleTransitionEnd = (event) => {
+    if (event.target === promoElement) {
+      promoElement.classList.remove(cssClasses.fadeOut);
+      promoElement.classList.add(cssClasses.hide);
+      promoElement.removeAttribute("style");
+      promoElement.removeEventListener("transitionend", handleTransitionEnd);
+    }
   };
 
   const hidePromo = () => {
     promoElement.classList.add(cssClasses.fadeOut);
-    promoElement.addEventListener("transitionend", handleTransitionEnd, {
-      once: true,
-    });
+    promoElement.addEventListener("transitionend", handleTransitionEnd);
   };
 
   setOwnHeight(promoElement);

@@ -20,13 +20,5 @@ export const setOwnHeight = (htmlElement) => {
   htmlElement.style.height = htmlElement.offsetHeight + "px";
 };
 
-export const handleCardClick = (cardElement, callback) => {
-  if (!cardElement) {
-    return;
-  }
-
-  callback();
-};
-
 export const getDetailsFromDatabase = (id, database) =>
   database.find((data) => data.id === id);

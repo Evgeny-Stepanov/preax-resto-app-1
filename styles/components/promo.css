@@ -42,9 +42,8 @@
 }
 
 .promo__icon-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: relative;
+  display: block;
   width: 20px;
   height: 20px;
   background-color: #393939;
@@ -53,8 +52,11 @@
 }
 
 .promo__icon {
+  position: absolute;
+  inset: 50% auto auto 50%;
   width: var(--size-lg);
   height: var(--size-lg);
   color: var(--color-neutral-900);
+  translate: -50% -50%;
   transition: color var(--transition-duration);
 }

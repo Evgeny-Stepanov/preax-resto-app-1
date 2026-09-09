@@ -5,6 +5,10 @@ body {
   font-size: var(--size-2xl);
   line-height: 1.5;
   font-weight: 400;
+
+  &:has(dialog[open]) {
+    overflow: hidden;
+  }
 }
 
 section {

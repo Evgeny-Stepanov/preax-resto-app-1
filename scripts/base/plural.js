@@ -1,4 +1,4 @@
-const RU_PLURAL = new Intl.PluralRules("ru-RU");
+const ruPlural = new Intl.PluralRules("ru-RU");
 
 export const RUB_PLURAL_FORMS = {
   one: "рубль",
@@ -13,6 +13,6 @@ export const GRAM_PLURAL_FORMS = {
 };
 
 export const pluralizeIntl = (number, forms) => {
-  const category = RU_PLURAL.select(number);
+  const category = ruPlural.select(number);
   return forms[category] || forms.many || forms.other || forms.one;
 };

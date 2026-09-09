@@ -1,21 +1,33 @@
+import { dishesDB } from "../base/constants.js";
 import { getDishDetails } from "../components/dishes.js";
-import { MODAL_SELECTOR, renderModal } from "../components/modal.js";
+import {
+  renderModal,
+  closeModalByClick,
+  closeModalByKeyDown,
+} from "../components/modal.js";
+import { createProductElement } from "../components/product/product.js";
 
 export const bindEvents = () => {
   const selectors = {
     dishLink: ".dish__link",
-    modal: MODAL_SELECTOR,
   };
 
   document.addEventListener("click", (event) => {
-    event.preventDefault();
+    const isDishLinkClicked = event.target.closest(selectors.dishLink);
 
-    const dishLinkElement = event.target.closest(selectors.dishLink);
-    const modalElement = document.querySelector(selectors.modal);
+    if (isDishLinkClicked) {
+      event.preventDefault();
 
-    if (dishLinkElement) {
-      const dishDetails = getDishDetails(dishLinkElement);
-      console.log(dishDetails);
+      const dishDetails = getDishDetails(isDishLinkClicked);
+      const productElement = createProductElement(dishesDB, dishDetails);
+
+      renderModal(productElement);
     }
+
+    closeModalByClick(event);
+  });
+
+  document.addEventListener("keydown", (event) => {
+    closeModalByKeyDown(event);
   });
 };
