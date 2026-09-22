@@ -75,7 +75,7 @@
   transition: background-color var(--transition-duration);
 }
 
-.user-tools__button--is-account {
+.user-tools__button--account {
   background-color: transparent;
   border: var(--border-width) solid var(--color-neutral-100);
 
@@ -95,7 +95,7 @@
   }
 }
 
-.user-tools__button--is-cart {
+.user-tools__button--cart {
   background-color: var(--color-neutral-100);
 
   .user-tools__icon {

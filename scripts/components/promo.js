@@ -20,8 +20,8 @@ export const initPromo = () => {
 
   const closeButtonElement = promoElement.querySelector(selectors.closeButton);
 
-  const handleTransitionEnd = (event) => {
-    if (event.target === promoElement) {
+  const handleTransitionEnd = ({ target }) => {
+    if (target === promoElement) {
       promoElement.classList.remove(cssClasses.fadeOut);
       promoElement.classList.add(cssClasses.hide);
       promoElement.removeAttribute("style");

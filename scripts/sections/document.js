@@ -6,6 +6,7 @@ import {
   closeModalByKeyDown,
 } from "../components/modal.js";
 import { createProductElement } from "../components/product/product.js";
+import { resetOrderState } from "../components/product/state.js";
 
 export const bindEvents = () => {
   const selectors = {
@@ -30,4 +31,6 @@ export const bindEvents = () => {
   document.addEventListener("keydown", (event) => {
     closeModalByKeyDown(event);
   });
+
+  document.addEventListener("modal:close", resetOrderState);
 };

@@ -484,4 +484,18 @@
       fill="currentColor"
     />
   </symbol>
+
+  <symbol
+    id="checkbox"
+    viewBox="0 0 9 7"
+    fill="none"
+  >
+    <path
+      d="M7.66667 1L3.08333 6L1 3.72727"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </symbol>
 </svg>

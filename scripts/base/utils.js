@@ -22,3 +22,13 @@ export const setOwnHeight = (htmlElement) => {
 
 export const getDetailsFromDatabase = (id, database) =>
   database.find((data) => data.id === id);
+
+export const createMap = (array, keyName = "id") => {
+  const map = new Map();
+
+  array.forEach((item) => {
+    map.set(item[keyName], item);
+  });
+
+  return map;
+};

@@ -18,7 +18,8 @@
 
   --color-yellow-500: #fedd2c;
 
-  --card-badge-background: rgba(0, 0, 0, 0.6);
+  --background-opacity: rgba(0, 0, 0, 0.6);
+
   --card-status-positive: var(--color-yellow-500);
   --card-status-negative: var(--color-neutral-500);
 

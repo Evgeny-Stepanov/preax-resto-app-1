@@ -8,9 +8,15 @@ export const createDetailsElement = ({
   title,
   description,
   sizes,
+  currency,
   dishSupplementsIds,
 }) => {
-  const detailsElement = createElement("div", "product__details");
+  const cssClasses = {
+    details: "product__details",
+    description: "product__description",
+  };
+
+  const detailsElement = createElement("div", cssClasses.details);
 
   const headerElement = createHeaderElement({
     allBadges,
@@ -21,11 +27,18 @@ export const createDetailsElement = ({
 
   detailsElement.append(headerElement);
 
-  const descriptionElement = createElement("p", "product__description");
-  descriptionElement.textContent =
-    "Традиционное испанское блюдо — рис, колбаски чоризо, куриное бедро, кальмар, кукуруза, горошек, специи Традиционное испанское блюдо — рис, колбаски чоризо, куриное бедро, кальмар, кукуруза, горошек, специи Традиционное испанское блюдо — рис, колбаски чоризо, куриное бедро, кальмар, кукуруза, горошек, специи Традиционное испанское блюдо — рис, колбаски чоризо, куриное бедро, кальмар, кукуруза, горошек, специи Традиционное испанское блюдо — рис, колбаски чоризо, куриное бедро, кальмар, кукуруза, горошек, специи Традиционное испанское блюдо — рис, колбаски чоризо, куриное бедро, кальмар, кукуруза, горошек, специи Традиционное испанское блюдо — рис, колбаски чоризо, куриное бедро, кальмар, кукуруза, горошек, специи Традиционное испанское блюдо — рис, колбаски чоризо, куриное бедро, кальмар, кукуруза, горошек, специи Традиционное испанское блюдо — рис, колбаски чоризо, куриное бедро, кальмар, кукуруза, горошек, специи Традиционное испанское блюдо — рис, колбаски чоризо, куриное бедро, кальмар, кукуруза, горошек, специи Традиционное испанское блюдо — рис, колбаски чоризо, куриное бедро, кальмар, кукуруза, горошек, специи Традиционное испанское блюдо — рис, колбаски чоризо, куриное бедро, кальмар, кукуруза, горошек, специи Традиционное испанское блюдо — рис, колбаски чоризо, куриное бедро, кальмар, кукуруза, горошек, специи Традиционное испанское блюдо — рис, колбаски чоризо, куриное бедро, кальмар, кукуруза, горошек, специи Традиционное испанское блюдо — рис, колбаски чоризо, куриное бедро, кальмар, кукуруза, горошек, специи Традиционное испанское блюдо — рис, колбаски чоризо, куриное бедро, кальмар, кукуруза, горошек, специи";
+  const descriptionElement = createElement("p", cssClasses.description);
+  descriptionElement.textContent = description;
 
   detailsElement.append(descriptionElement);
+
+  const formElement = createFormElement({
+    sizes,
+    currency,
+    dishSupplementsIds,
+  });
+
+  detailsElement.append(formElement);
 
   return detailsElement;
 };

@@ -1,3 +1,5 @@
+import { pluralize } from "./plural.js";
+
 export const createElement = (type, className) => {
   const isSvg = type === "svg" || type === "use";
 
@@ -10,6 +12,13 @@ export const createElement = (type, className) => {
   }
 
   return element;
+};
+
+export const createA11yElement = (number, pluralForms) => {
+  const a11yElement = createElement("span", "visually-hidden");
+  a11yElement.textContent = `${number} ${pluralize(number, pluralForms)}`;
+
+  return a11yElement;
 };
 
 export const createPictureElement = ({
@@ -58,4 +67,30 @@ export const createSpriteIconElement = ({
   svgElement.append(useElement);
 
   return svgElement;
+};
+
+export const createInputElement = ({ className, type, id, name, value }) => {
+  const inputElement = createElement("input", className);
+
+  inputElement.setAttribute("type", type);
+
+  if (id) {
+    inputElement.setAttribute("id", id);
+  }
+
+  inputElement.setAttribute("name", name);
+
+  if (value) {
+    inputElement.setAttribute("value", value);
+  }
+
+  return inputElement;
+};
+
+export const createButtonElement = (className, type = "button") => {
+  const buttonElement = createElement("button", className);
+
+  buttonElement.setAttribute("type", type);
+
+  return buttonElement;
 };

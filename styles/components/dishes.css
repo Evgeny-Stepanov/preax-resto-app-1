@@ -83,7 +83,8 @@
   color: var(--color-neutral-100);
   background-color: #f4f4f4;
   border-radius: var(--size-2xl);
-  transition: all var(--transition-duration);
+  transition-duration: color, background;
+  transition-duration: var(--transition-duration);
 
   &:hover,
   &:focus-visible {

@@ -1,0 +1,23 @@
+.product__badges {
+  flex-wrap: wrap;
+  gap: var(--size-lg);
+  margin-bottom: var(--size-2xl);
+}
+
+.product__badges,
+.product__badge {
+  display: flex;
+}
+
+.product__badge {
+  gap: 6px;
+  padding: var(--size-lg);
+  font-size: 14px;
+  line-height: 1.22857;
+  font-weight: 600;
+  color: var(--color-neutral-900);
+}
+
+.product__badge-wrapper {
+  padding: var(--size-xs);
+}

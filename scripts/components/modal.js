@@ -20,11 +20,12 @@ export const renderModal = (htmlElement) => {
   modalElement.classList.add("open");
 };
 
-const handleTransitionEnd = (event) => {
-  if (event.target === modalElement && event.propertyName === "opacity") {
+const handleTransitionEnd = ({ target, propertyName }) => {
+  if (target === modalElement && propertyName === "opacity") {
     modalElement.close();
     contentElement.replaceChildren();
     modalElement.removeEventListener("transitionend", handleTransitionEnd);
+    document.dispatchEvent(new CustomEvent("modal:close"));
   }
 };
 
@@ -33,13 +34,13 @@ const closeModal = () => {
   modalElement.addEventListener("transitionend", handleTransitionEnd);
 };
 
-export const closeModalByClick = (event) => {
+export const closeModalByClick = ({ target }) => {
   if (!modalElement && !modalElement.hasAttribute("open")) {
     return;
   }
 
-  const isCloseButtonClicked = event.target.closest(selectors.closeButton);
-  const isOverlayClicked = event.target === modalElement;
+  const isCloseButtonClicked = target.closest(selectors.closeButton);
+  const isOverlayClicked = target === modalElement;
 
   if (isCloseButtonClicked || isOverlayClicked) {
     closeModal();

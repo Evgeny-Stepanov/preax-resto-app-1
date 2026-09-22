@@ -1,5 +1,6 @@
 .modal {
   position: fixed;
+  inset: 50% auto auto 50%;
   justify-content: center;
   gap: var(--size-2xl);
   min-width: 1088px;
@@ -9,7 +10,7 @@
   border: none;
   border-radius: var(--size-2xl);
   opacity: 0;
-  translate: -50% -50%;
+  translate: calc(-50% + var(--size-4xl)) -50%;
   transform: scale(0.95);
   overflow: hidden;
 
@@ -36,11 +37,6 @@
   transition-duration: var(--transition-duration);
 }
 
-.modal,
-.modal__icon {
-  inset: 50% auto auto 50%;
-}
-
 .modal__content {
   padding: var(--size-4xl) 0 var(--size-4xl) var(--size-4xl);
   background-color: var(--color-neutral-900);
@@ -50,56 +46,6 @@
 .modal__button {
   border-radius: var(--size-2xl);
 }
-
-/* 
-.modal__content {
-  display: flex;
-  flex-direction: column;
-  max-height: calc(100dvh - 64px);
-  padding: var(--size-4xl) var(--size-sm) var(--size-4xl) 0;
-  overflow: hidden;
-}
-
-.modal__scroll {
-  padding-inline: var(--size-4xl) 28px;
-  overflow-y: auto;
-  flex: 1 1 auto;
-
-  &::-webkit-scrollbar {
-    width: 6px;
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background-color: var(--color-yellow-500);
-    border-radius: var(--size-2xl);
-  }
-
-  &::-webkit-scrollbar-button {
-    display: none;
-  }
-}
-
-@supports (-moz-appearance: none) {
-  .modal__scroll {
-    scrollbar-width: thin;
-    scrollbar-color: var(--color-yellow-500) transparent;
-  }
-}
-
-.modal__title {
-  position: sticky;
-  inset: 0 auto auto 0;
-  padding-bottom: var(--size-4xl);
-  font-size: var(--size-4xl);
-  line-height: 1.25;
-  background-color: var(--color-neutral-900);
-}
-
-.modal__text {
-  font-size: 18px;
-  line-height: 1.33333;
-}
-   */
 
 .modal__button {
   width: 48px;
@@ -118,16 +64,16 @@
 
 .modal__icon-wrapper {
   position: relative;
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: var(--size-3xl);
   height: var(--size-3xl);
 }
 
 .modal__icon {
-  position: absolute;
   width: 11px;
   height: 11px;
   color: var(--color-neutral-500);
-  translate: -50% -50%;
   transition: color var(--transition-duration);
 }

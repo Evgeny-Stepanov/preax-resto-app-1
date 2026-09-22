@@ -2,7 +2,12 @@ import { createElement, createPictureElement } from "../../base/elements.js";
 import { createDetailsElement } from "./details.js";
 
 export const createProductElement = (dishesDB, dishDetails) => {
-  const { currency, badges: allBadges, supplements: allSupplements } = dishesDB;
+  const cssClasses = {
+    product: "product",
+    dishImage: "product__image",
+  };
+
+  const { currency, badges: allBadges } = dishesDB;
 
   const {
     img,
@@ -13,14 +18,14 @@ export const createProductElement = (dishesDB, dishDetails) => {
     supplements: dishSupplementsIds,
   } = dishDetails;
 
-  const productElement = createElement("div", "product");
+  const productElement = createElement("div", cssClasses.product);
 
   const dishImageElement = createPictureElement({
     width: 422,
     height: 422,
     jpgSrc: img,
     alt: title,
-    className: "product__image",
+    className: cssClasses.dishImage,
   });
 
   const detailsElement = createDetailsElement({
@@ -29,6 +34,7 @@ export const createProductElement = (dishesDB, dishDetails) => {
     title,
     description,
     sizes,
+    currency,
     dishSupplementsIds,
   });
 
