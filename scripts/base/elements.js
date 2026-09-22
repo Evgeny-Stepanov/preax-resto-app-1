@@ -27,20 +27,40 @@ export const createPictureElement = ({
   jpgSrc,
   alt,
   className,
+  fallbackSrc,
 }) => {
   const pictureElement = createElement("picture", className);
 
-  const sourceElement = createElement("source");
-  sourceElement.setAttribute("srcset", jpgSrc.replace(/\.[^/.]+$/, ".webp"));
-  sourceElement.setAttribute("type", "image/webp");
-
   const imageElement = createElement("img");
-  imageElement.src = jpgSrc;
   imageElement.alt = alt;
   imageElement.setAttribute("width", width);
   imageElement.setAttribute("height", height);
 
-  pictureElement.append(sourceElement, imageElement);
+  if (fallbackSrc) {
+    imageElement.addEventListener("error", () => {
+      if (imageElement.getAttribute("src") === fallbackSrc) {
+        imageElement.onerror = null;
+        return;
+      }
+      imageElement.src = fallbackSrc;
+    });
+  }
+
+  imageElement.src = jpgSrc;
+
+  const webpSrc = jpgSrc.replace(/\.[^/.]+$/, ".webp");
+  const probe = new Image();
+
+  probe.onload = () => {
+    const sourceElement = createElement("source");
+    sourceElement.setAttribute("srcset", webpSrc);
+    sourceElement.setAttribute("type", "image/webp");
+    pictureElement.prepend(sourceElement);
+  };
+
+  probe.src = webpSrc;
+
+  pictureElement.append(imageElement);
 
   return pictureElement;
 };

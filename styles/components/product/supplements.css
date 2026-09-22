@@ -28,6 +28,7 @@
   border-radius: var(--size-2xl);
   transition-property: color, background-color, border-color;
   transition-duration: var(--transition-duration);
+  overflow: hidden;
 
   &:hover,
   &:has(input:focus-visible) {
@@ -99,10 +100,6 @@
   display: block;
   width: 156px;
   height: 156px;
-
-  img {
-    border-radius: var(--size-2xl) var(--size-2xl) 0 0;
-  }
 }
 
 .supplement__text {

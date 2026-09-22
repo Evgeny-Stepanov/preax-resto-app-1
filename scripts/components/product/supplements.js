@@ -24,6 +24,7 @@ export const createSupplementsElement = (dishSupplementsIds, currency) => {
     supplementPrice: "supplement__price",
   };
   const checkboxIconPath = "images/sprite.svg#checkbox";
+  const placeholderImagePath = "images/supplements/placeholder.jpg";
 
   const supplementsElement = createElement("fieldset", cssClasses.supplements);
 
@@ -44,8 +45,6 @@ export const createSupplementsElement = (dishSupplementsIds, currency) => {
     const supplementOption = dishesSupplementsMap.get(item);
     const { id, title, img, g: weight, price } = supplementOption;
 
-    const imagePath = img ? img : "images/supplements/placeholder.jpg";
-
     const supplementElement = createElement("label", cssClasses.supplement);
 
     const inputElement = createInputElement({
@@ -59,9 +58,10 @@ export const createSupplementsElement = (dishSupplementsIds, currency) => {
     const pictureElement = createPictureElement({
       width: 158,
       height: 158,
-      jpgSrc: imagePath,
+      jpgSrc: img,
       alt: title,
       className: cssClasses.supplementPicture,
+      fallbackSrc: placeholderImagePath,
     });
 
     if (weight !== null) {
