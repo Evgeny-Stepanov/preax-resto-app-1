@@ -1,0 +1,23 @@
+{
+  "name": "resto-app-1",
+  "homepage": "https://github.com/Evgeny-Stepanov/preax-resto-app-1#readme",
+  "version": "1.0.0",
+  "description": "",
+  "bugs": {
+    "url": "https://github.com/Evgeny-Stepanov/preax-resto-app-1/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Evgeny-Stepanov/preax-resto-app-1.git"
+  },
+  "license": "ISC",
+  "author": "Evgeny Stepanov",
+  "type": "commonjs",
+  "main": "script.js",
+  "scripts": {
+    "deploy": "gh-pages -d ."
+  },
+  "dependencies": {
+    "gh-pages": "^6.3.0"
+  }
+}
