@@ -1,0 +1,132 @@
+@import url("badges.css");
+@import url("sizes.css");
+@import url("supplements.css");
+
+.product {
+  display: flex;
+  gap: var(--size-4xl);
+  height: 100%;
+  margin-right: var(--size-sm);
+  padding-right: 22px;
+  color: var(--color-neutral-100);
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--color-yellow-500);
+    border-radius: var(--size-2xl);
+  }
+
+  &::-webkit-scrollbar-button {
+    display: none;
+  }
+}
+
+@supports (-moz-appearance: none) {
+  .product {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-yellow-500) transparent;
+  }
+}
+
+.product__image {
+  flex-shrink: 0;
+  width: 422px;
+  height: 422px;
+
+  img {
+    border-radius: var(--size-2xl);
+  }
+}
+
+.product__image,
+.product__header {
+  position: sticky;
+  inset: 0 auto auto 0;
+}
+
+/* 1px jump when scrolling in Chrome */
+@supports (-webkit-appearance: none) {
+  .product__image,
+  .product__header {
+    inset: 1px auto auto 0;
+  }
+  .product__header {
+    box-shadow: 0 -1px 0 0 var(--color-neutral-900);
+  }
+}
+
+.product__details {
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  max-width: 506px;
+  min-height: max(100%, 422px);
+}
+
+.product__header {
+  z-index: 10;
+  padding-bottom: var(--size-4xl);
+  background-color: var(--color-neutral-900);
+}
+
+.product__title {
+  font-size: var(--size-4xl);
+  line-height: 1.25;
+  font-weight: 600;
+}
+
+.product__weight {
+  margin-top: var(--size-lg);
+  color: var(--color-neutral-500);
+}
+
+.product__description {
+  font-size: 18px;
+  line-height: 1.33333;
+}
+
+.product__form {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  margin-top: var(--size-4xl);
+
+  fieldset:not(:first-of-type) {
+    margin-top: var(--size-4xl);
+  }
+}
+
+.product__button-wrapper {
+  position: sticky;
+  inset: auto auto 0 0;
+  margin-top: auto;
+  padding-top: var(--size-4xl);
+  background-color: var(--color-neutral-900);
+  box-shadow: 0 0 0 1px var(--color-neutral-900);
+}
+
+.product__button {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--size-2xl);
+  width: 100%;
+  padding: var(--size-2xl) var(--size-3xl);
+  font-size: 18px;
+  line-height: 1.33333;
+  font-weight: 600;
+  background-color: var(--color-yellow-500);
+  border-radius: var(--size-2xl);
+  transition-property: color, background-color;
+  transition-duration: var(--transition-duration);
+
+  &:hover,
+  &:focus-visible {
+    color: var(--color-neutral-900);
+    background-color: var(--color-neutral-100);
+  }
+}

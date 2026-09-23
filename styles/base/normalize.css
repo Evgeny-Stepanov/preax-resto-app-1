@@ -35,7 +35,7 @@ body {
 }
 
 p {
-  --paragraphMarginBottom: 24px;
+  --paragraphMarginBottom: var(--size-3xl);
   margin-block: 0;
 }
 

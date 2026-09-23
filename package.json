@@ -1,9 +1,8 @@
 {
   "name": "resto-app-1",
-  "homepage": "https://Evgeny-Stepanov.github.io/preax-resto-app-1",
+  "homepage": "https://github.com/Evgeny-Stepanov/preax-resto-app-1#readme",
   "version": "1.0.0",
   "description": "",
-  "homepage": "https://github.com/Evgeny-Stepanov/preax-resto-app-1#readme",
   "bugs": {
     "url": "https://github.com/Evgeny-Stepanov/preax-resto-app-1/issues"
   },
@@ -18,7 +17,7 @@
   "scripts": {
     "deploy": "gh-pages -d ."
   },
-  "devDependencies": {
+  "dependencies": {
     "gh-pages": "^6.3.0"
   }
 }

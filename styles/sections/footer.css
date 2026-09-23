@@ -50,20 +50,20 @@
     width: 40px;
     height: 40px;
     background-color: #393939;
-    border-radius: var(--border-radius-lg);
+    border-radius: var(--size-lg);
   }
 
-  .contacts__social-icon--is-telegram {
+  .contacts__social-icon--telegram {
     width: 18px;
     height: 15px;
   }
 
-  .contacts__social-icon--is-vk {
+  .contacts__social-icon--vk {
     width: 20px;
     height: var(--size-xl);
   }
 
-  .contacts__social-icon--is-whats-app {
+  .contacts__social-icon--whats-app {
     width: 19px;
     height: 20px;
   }
@@ -156,21 +156,21 @@
   width: 48px;
   height: 29px;
   background-color: #393939;
-  border-radius: var(--border-radius-sm);
+  border-radius: var(--size-sm);
   pointer-events: none;
 }
 
-.footer__card-icon--is-visa {
+.footer__card-icon--visa {
   width: var(--size-4xl);
   height: 11px;
 }
 
-.footer__card-icon--is-mastercard {
+.footer__card-icon--mastercard {
   width: 22px;
   height: 14px;
 }
 
-.footer__card-icon--is-mir {
+.footer__card-icon--mir {
   width: var(--size-4xl);
   height: 10px;
 }

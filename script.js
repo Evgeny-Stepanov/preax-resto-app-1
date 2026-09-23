@@ -1,19 +1,14 @@
-const promoCloseButtonElement = document.querySelector(".promo__button");
+import { initPromo } from "./scripts/components/promo.js";
+import { bindEvents } from "./scripts/sections/document.js";
+import {
+  selectorsForTests,
+  testDishModal,
+} from "./scripts/components/product/test.js";
 
-const promoCloseButtonHandleClick = () => {
-  promoCloseButtonElement.addEventListener("click", (event) => {
-    const promoElement = event.currentTarget.closest(".promo");
+initPromo();
+bindEvents();
 
-    hideElement(promoElement);
-  });
-};
+/* If necessary, change the second argument — the delay before opening the modal. */
 
-const hideElement = (element) => {
-  if (!(element instanceof HTMLElement)) {
-    throw new Error("Аргумент не является HTML-элементом");
-  }
-
-  element.classList.add("hide");
-};
-
-promoCloseButtonHandleClick();
+/* testDishModal(selectorsForTests.foBo, 1000); */
+/* testDishModal(selectorsForTests.gorgonzolaPear, 1000); */

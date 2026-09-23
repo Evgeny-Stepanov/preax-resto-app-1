@@ -9,27 +9,25 @@
     <title>Resto App</title>
     <link
       rel="icon"
-      type="image/png"
-      href="images/favicon/favicon-96x96.png"
-      sizes="96x96"
-    />
-    <link
-      rel="icon"
-      type="image/svg+xml"
-      href="images/favicon/favicon.svg"
-    />
-    <link
-      rel="shortcut icon"
       href="images/favicon/favicon.ico"
+      sizes="any"
     />
     <link
       rel="apple-touch-icon"
       sizes="180x180"
       href="images/favicon/apple-touch-icon.png"
     />
-    <meta
-      name="apple-mobile-web-app-title"
-      content="Resto App"
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/favicon/favicon-16x16.png"
     />
     <link
       rel="manifest"
@@ -41,7 +39,7 @@
     />
     <script
       src="script.js"
-      defer
+      type="module"
     ></script>
   </head>
 
@@ -153,7 +151,7 @@
             <li>
               <button
                 type="button"
-                class="user-tools__button user-tools__button--is-account"
+                class="user-tools__button user-tools__button--account"
                 title="Личный кабинет"
                 aria-label="Открыть личный кабинет"
               >
@@ -170,7 +168,7 @@
             <li>
               <button
                 type="button"
-                class="user-tools__button user-tools__button--is-cart"
+                class="user-tools__button user-tools__button--cart"
                 title="Корзина"
                 aria-label="Открыть корзину"
               >
@@ -292,6 +290,7 @@
             <a
               href="index.html"
               class="dish__link"
+              data-dish-id="chinese-egg-soup"
             >
               <ul class="dish__badges">
                 <li
@@ -347,6 +346,7 @@
             <a
               href="index.html"
               class="dish__link"
+              data-dish-id="paella"
             >
               <ul class="dish__badges">
                 <li
@@ -403,15 +403,16 @@
             <a
               href="index.html"
               class="dish__link"
+              data-dish-id="beef-bourguignon"
             >
               <div class="dish__image-wrapper">
                 <picture>
                   <source
-                    srcset="images/new/boeuf-bourguignon.webp"
+                    srcset="images/new/beef-bourguignon.webp"
                     type="image/webp"
                   />
                   <img
-                    src="images/new/boeuf-bourguignon.jpg"
+                    src="images/new/beef-bourguignon.jpg"
                     width="304"
                     height="304"
                     alt="Биф Бургеньон"
@@ -442,6 +443,7 @@
             <a
               href="index.html"
               class="dish__link"
+              data-dish-id="smashed-cucumbers"
             >
               <ul class="dish__badges">
                 <li
@@ -463,11 +465,11 @@
               <div class="dish__image-wrapper">
                 <picture>
                   <source
-                    srcset="images/new/broken-cucumbers.webp"
+                    srcset="images/new/smashed-cucumbers.webp"
                     type="image/webp"
                   />
                   <img
-                    src="images/new/broken-cucumbers.jpg"
+                    src="images/new/smashed-cucumbers.jpg"
                     width="304"
                     height="304"
                     alt="Битые огурцы"
@@ -503,6 +505,7 @@
             <a
               href="index.html"
               class="dish__link"
+              data-dish-id="pepperoni"
             >
               <div class="dish__image-wrapper">
                 <picture>
@@ -543,6 +546,7 @@
             <a
               href="index.html"
               class="dish__link"
+              data-dish-id="gorgonzola-pear"
             >
               <ul class="dish__badges">
                 <li
@@ -564,11 +568,11 @@
               <div class="dish__image-wrapper">
                 <picture>
                   <source
-                    srcset="images/popular/pear-gorgonzola.webp"
+                    srcset="images/popular/gorgonzola-pear.webp"
                     type="image/webp"
                   />
                   <img
-                    src="images/popular/pear-gorgonzola.jpg"
+                    src="images/popular/gorgonzola-pear.jpg"
                     width="304"
                     height="304"
                     alt="Груша Горгонзола"
@@ -600,15 +604,16 @@
             <a
               href="index.html"
               class="dish__link"
+              data-dish-id="fo-bo"
             >
               <div class="dish__image-wrapper">
                 <picture>
                   <source
-                    srcset="images/popular/pho-bo.webp"
+                    srcset="images/popular/fo-bo.webp"
                     type="image/webp"
                   />
                   <img
-                    src="images/popular/pho-bo.jpg"
+                    src="images/popular/fo-bo.jpg"
                     width="304"
                     height="304"
                     alt="Фо Бо"
@@ -642,6 +647,7 @@
             <a
               href="index.html"
               class="dish__link"
+              data-dish-id="tom-yam-fish"
             >
               <ul class="dish__badges">
                 <li
@@ -677,11 +683,11 @@
               <div class="dish__image-wrapper">
                 <picture>
                   <source
-                    srcset="images/popular/tom-yum-with-seafood.webp"
+                    srcset="images/popular/tom-yam-fish.webp"
                     type="image/webp"
                   />
                   <img
-                    src="images/popular/tom-yum-with-seafood.jpg"
+                    src="images/popular/tom-yam-fish.jpg"
                     width="304"
                     height="304"
                     alt="Том Ям с морепродуктами"
@@ -787,7 +793,7 @@
               <div class="card__badges-wrapper">
                 <ul class="card__badges">
                   <li class="card__badge">
-                    <p><time datetime="--01-27">27 января</time></p>
+                    <p><time datetime="01-27">27 января</time></p>
                   </li>
                   <li class="card__badge">
                     <p><time datetime="21:00">В 21:00</time></p>
@@ -823,13 +829,13 @@
               <div class="card__badges-wrapper">
                 <ul class="card__badges">
                   <li class="card__badge">
-                    <p><time datetime="--01-21">21 января</time></p>
+                    <p><time datetime="01-21">21 января</time></p>
                   </li>
                   <li class="card__badge">
                     <p>Скидка 20%</p>
                   </li>
                 </ul>
-                <p class="card__status card__status--is-negative">Завершено</p>
+                <p class="card__status card__status--negative">Завершено</p>
               </div>
 
               <picture>
@@ -853,7 +859,7 @@
         </ul>
         <button
           type="button"
-          class="button sales__button"
+          class="button"
           aria-label="Все события, подробнее"
         >
           Все события
@@ -978,7 +984,7 @@
                 <svg
                   width="18"
                   height="15"
-                  class="contacts__social-icon contacts__social-icon--is-telegram"
+                  class="contacts__social-icon contacts__social-icon--telegram"
                   aria-hidden="true"
                 >
                   <use href="images/sprite.svg#telegram"></use>
@@ -996,7 +1002,7 @@
                 <svg
                   width="20"
                   height="12"
-                  class="contacts__social-icon contacts__social-icon--is-vk"
+                  class="contacts__social-icon contacts__social-icon--vk"
                   aria-hidden="true"
                 >
                   <use href="images/sprite.svg#vk"></use>
@@ -1014,7 +1020,7 @@
                 <svg
                   width="19"
                   height="20"
-                  class="contacts__social-icon contacts__social-icon--is-whats-app"
+                  class="contacts__social-icon contacts__social-icon--whats-app"
                   aria-hidden="true"
                 >
                   <use href="images/sprite.svg#whats-app"></use>
@@ -1164,7 +1170,7 @@
               <svg
                 width="32"
                 height="11"
-                class="footer__card-icon footer__card-icon--is-visa"
+                class="footer__card-icon footer__card-icon--visa"
                 aria-hidden="true"
               >
                 <use href="images/sprite.svg#visa"></use>
@@ -1177,7 +1183,7 @@
               <svg
                 width="22"
                 height="14"
-                class="footer__card-icon footer__card-icon--is-mastercard"
+                class="footer__card-icon footer__card-icon--mastercard"
                 aria-hidden="true"
               >
                 <use href="images/sprite.svg#mastercard"></use>
@@ -1190,7 +1196,7 @@
               <svg
                 width="32"
                 height="10"
-                class="footer__card-icon footer__card-icon--is-mir"
+                class="footer__card-icon footer__card-icon--mir"
                 aria-hidden="true"
               >
                 <use href="images/sprite.svg#mir"></use>
@@ -1214,5 +1220,25 @@
         </p>
       </div>
     </footer>
+
+    <dialog class="modal">
+      <div class="modal__content"></div>
+      <button
+        class="modal__button"
+        type="button"
+        aria-label="Закрыть окно"
+      >
+        <span class="modal__icon-wrapper">
+          <svg
+            width="11"
+            height="11"
+            class="modal__icon"
+            aria-hidden="true"
+          >
+            <use href="images/sprite.svg#cross"></use>
+          </svg>
+        </span>
+      </button>
+    </dialog>
   </body>
 </html>
